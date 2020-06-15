@@ -42,6 +42,7 @@ class GymAppState extends State {
     return MaterialApp(
       
       title: 'Flutter Demo',
+      theme: ThemeData(fontFamily: 'Arial'),
       home: Scaffold(
         body: listWidget.elementAt(_currentIndex),
         bottomNavigationBar: BottomNavigationBar(
