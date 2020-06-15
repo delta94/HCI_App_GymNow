@@ -21,15 +21,15 @@ class ShoppingCart extends StatelessWidget {
           SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.only(left: 20),
-            child: Text('Category (0 course)',
+            child: Text('Cart (0 course)',
                 style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 30,
+                  fontWeight: FontWeight.normal,
                   color: Colors.white,
-                  fontFamily: 'Times New Roman',
+                  fontFamily: 'Calibri',
                 )),
           ),
-          SizedBox(height: 150),
+          SizedBox(height: 50),
           CircleAvatar(
             radius: 80,
             backgroundColor: Colors.grey,
@@ -47,7 +47,7 @@ class ShoppingCart extends StatelessWidget {
                 color: Colors.white,
                 fontSize: 25,
                 fontWeight: FontWeight.w600,
-                fontFamily: 'Times New Roman',
+                fontFamily: 'Calibri',
               ),
             ),
           ),
@@ -56,17 +56,29 @@ class ShoppingCart extends StatelessWidget {
             height: 50,
             margin: EdgeInsets.symmetric(horizontal: 70),
             padding: EdgeInsets.only(top: 10),
+            
+            decoration: BoxDecoration(
+              color: Colors.cyan[900],
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.cyan[900].withOpacity(0.5),
+                  spreadRadius: 5,
+                  blurRadius: 7,
+                  offset: Offset(0, 3), // changes position of shadow
+                ),
+              ]
+            ),
             child: Text(
               'Shopping Now',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 25,
                 fontWeight: FontWeight.w500,
-                fontFamily: 'Times New Roman',
+                fontFamily: 'Calibri',
               ),
               textAlign: TextAlign.center,
             ),
-            color: Colors.cyan[900],
+            
 
           ),
         ],

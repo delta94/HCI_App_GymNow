@@ -1,11 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
+import 'package:gym_app/category-aerobicpage.dart';
 import 'package:gym_app/category-gympage.dart';
-=======
-import 'package:gym_app/sample.dart';
+import 'package:gym_app/category-yogapage.dart';
+import 'package:gym_app/categoy-streetpage.dart';
 
->>>>>>> 799514fbd1cc2b9be9550f1453e9be63cb895192
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -43,17 +42,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-<<<<<<< HEAD
-          decoration: BoxDecoration(
-            color: Colors.cyan[800],
-          ),
-          child: ListView(
-=======
       decoration: BoxDecoration(color: Colors.cyan[800]),
       child: ListView(
         children: <Widget>[
           Column(
->>>>>>> 799514fbd1cc2b9be9550f1453e9be63cb895192
             children: <Widget>[
               //Logo
               Container(
@@ -163,50 +155,6 @@ class _HomePageState extends State<HomePage> {
                     )
                   ],
                 ),
-<<<<<<< HEAD
-                //Category's children
-                Padding(
-                  padding: EdgeInsets.only(
-                    top: 15,
-                    left: 20,
-                    right: 20
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      new GestureDetector(
-                        onTap: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => 
-                            GymCategoryPage()),
-                          );
-                        },
-                        child: Container(
-                          
-                          width: screenWidth(context, dividedBy: 5),
-                          height: screenWidth(context, dividedBy: 5),
-                          decoration: BoxDecoration(
-                            color: Colors.cyan[900],
-                            borderRadius: BorderRadius.all(Radius.circular(5)),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(20.0),
-                            child: Center(
-                              child: Text(  
-                                'Gym',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 10, 
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Container(
-=======
               ),
               //Category's children
               Padding(
@@ -218,11 +166,10 @@ class _HomePageState extends State<HomePage> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => ItemPage()),
+                          MaterialPageRoute(builder: (context) => GymCategoryPage()),
                         );
                       },
                       child: Container(
->>>>>>> 799514fbd1cc2b9be9550f1453e9be63cb895192
                         width: screenWidth(context, dividedBy: 5),
                         height: screenWidth(context, dividedBy: 5),
                         decoration: BoxDecoration(
@@ -244,64 +191,88 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                     ),
-                    Container(
-                      width: screenWidth(context, dividedBy: 5),
-                      height: screenWidth(context, dividedBy: 5),
-                      decoration: BoxDecoration(
-                        color: Colors.cyan[900],
-                        borderRadius: BorderRadius.all(Radius.circular(5)),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Center(
-                          child: Text(
-                            'Yoga',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 10,
+                    new GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => YogaCategoryPage()),
+                        );
+                      },
+                      child: Container(
+                        width: screenWidth(context, dividedBy: 5),
+                        height: screenWidth(context, dividedBy: 5),
+                        decoration: BoxDecoration(
+                          color: Colors.cyan[900],
+                          borderRadius: BorderRadius.all(Radius.circular(5)),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Center(
+                            child: Text(
+                              'Yoga',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
-                    Container(
-                      width: screenWidth(context, dividedBy: 5),
-                      height: screenWidth(context, dividedBy: 5),
-                      decoration: BoxDecoration(
-                        color: Colors.cyan[900],
-                        borderRadius: BorderRadius.all(Radius.circular(5)),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Center(
-                          child: Text(
-                            'Street Workout',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 10,
+                    new GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => StreetCategoryPage()),
+                        );
+                      },
+                      child: Container(
+                        width: screenWidth(context, dividedBy: 5),
+                        height: screenWidth(context, dividedBy: 5),
+                        decoration: BoxDecoration(
+                          color: Colors.cyan[900],
+                          borderRadius: BorderRadius.all(Radius.circular(5)),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Center(
+                            child: Text(
+                              'Street Workout',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
-                    Container(
-                      width: screenWidth(context, dividedBy: 5),
-                      height: screenWidth(context, dividedBy: 5),
-                      decoration: BoxDecoration(
-                        color: Colors.cyan[900],
-                        borderRadius: BorderRadius.all(Radius.circular(5)),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Center(
-                          child: Text(
-                            'Aerobic',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 10,
+                    new GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => AerobicCategoryPage()),
+                        );
+                      },
+                      child: Container(
+                        width: screenWidth(context, dividedBy: 5),
+                        height: screenWidth(context, dividedBy: 5),
+                        decoration: BoxDecoration(
+                          color: Colors.cyan[900],
+                          borderRadius: BorderRadius.all(Radius.circular(5)),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Center(
+                            child: Text(
+                              'Aerobic',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 10,
+                              ),
                             ),
                           ),
                         ),
