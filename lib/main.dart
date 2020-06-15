@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:gym_app/homepage.dart';
+import 'package:gym_app/shopping_cart.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,7 +25,7 @@ class GymAppState extends State {
   final List<Widget> listWidget = [
     HomePage(),
     Container(),
-    Container(),
+    ShoppingCart(),
     Container(),
     Container(),
 
