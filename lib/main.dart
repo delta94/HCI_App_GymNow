@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:gym_app/homepage.dart';
+import 'package:gym_app/home-page-v2.dart';
+import 'package:gym_app/mepage.dart';
 import 'package:gym_app/shopping_cart.dart';
 
 void main() {
@@ -10,8 +11,9 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-    home: GymApp(),
+    return new MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: GymApp(),
       );
   }
 }
@@ -19,15 +21,15 @@ class GymApp extends StatefulWidget {
   GymAppState createState() => GymAppState();
 }
 
- 
+final Colors mainColor = Colors.cyan[900] as Colors; 
 
 class GymAppState extends State {
   final List<Widget> listWidget = [
-    HomePage(),
+    HomePageV2(),
     Container(),
     ShoppingCart(),
     Container(),
-    Container(),
+    MePage(),
 
   ];
 
@@ -49,32 +51,37 @@ class GymAppState extends State {
         bottomNavigationBar: BottomNavigationBar(
             currentIndex: _currentIndex,
             onTap: indexLast,
-
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
               title: Text('Home'),
-              backgroundColor: Colors.cyan[900]
+              // backgroundColor: Colors.cyan[900]
+              backgroundColor: Colors.red[900],
+              
             ),
             BottomNavigationBarItem(
               icon: Icon(MaterialCommunityIcons.dumbbell),
               title: Text('Trainning'),
-              backgroundColor: Colors.cyan[900]
+              // backgroundColor: Colors.cyan[900]
+              backgroundColor: Colors.red[900]
             ),
             BottomNavigationBarItem(
               icon: Icon(AntDesign.shoppingcart),
               title: Text('Cart'),
-              backgroundColor: Colors.cyan[900]
+              // backgroundColor: Colors.cyan[900]
+              backgroundColor: Colors.red[900]
             ),
             BottomNavigationBarItem(
               icon: Icon(Octicons.report),
               title: Text('Report'),
-              backgroundColor: Colors.cyan[900]
+              // backgroundColor: Colors.cyan[900]
+              backgroundColor: Colors.red[900]
             ),
             BottomNavigationBarItem(
-              icon: Icon(Entypo.menu),
-              title: Text('Me'),
-              backgroundColor: Colors.cyan[900]
+              icon: Icon(MaterialCommunityIcons.account),
+              title: Text('Account'),
+              // backgroundColor: Colors.cyan[900]
+              backgroundColor: Colors.red[900]
             ),
           ],
         ),

@@ -18,7 +18,16 @@ class AerobicCategoryPage extends StatelessWidget {
         bottom: 20
       ),
       decoration: BoxDecoration(
-        color: Colors.cyan[800]
+        // color: Colors.red[800]
+        gradient: LinearGradient(
+                    colors: [
+                    Colors.black,
+                    Colors.grey[600],
+                    Colors.black
+                    ],
+                    begin: FractionalOffset.topCenter,
+                    end: FractionalOffset.bottomCenter
+        )
       ),
       child: ListView(
         children: <Widget>[
@@ -66,7 +75,7 @@ class AerobicCategoryPage extends StatelessWidget {
                   left: 20
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.cyan,
+                  color: Colors.red,
                   borderRadius: BorderRadius.all(Radius.circular(50))
                 ),
                 child: Padding(
@@ -89,7 +98,7 @@ class AerobicCategoryPage extends StatelessWidget {
                   left: 10
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.cyan[900],
+                  color: Colors.red[900],
                   borderRadius: BorderRadius.all(Radius.circular(50))
                 ),
                 child: Padding(
@@ -112,7 +121,7 @@ class AerobicCategoryPage extends StatelessWidget {
                   left: 10
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.cyan[900],
+                  color: Colors.red[900],
                   borderRadius: BorderRadius.all(Radius.circular(50))
                 ),
                 child: Padding(
@@ -162,7 +171,7 @@ class AerobicCategoryPage extends StatelessWidget {
                             Icon(Icons.star, color: Colors.yellow, size: 12),
                             Icon(Icons.star, color: Colors.yellow, size: 12),
                             Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.cyan[900], size: 12),
+                            Icon(Icons.star, color: Colors.red[900], size: 12),
                             Text(
                               '   (119)',
                               style: TextStyle(
@@ -272,7 +281,7 @@ class AerobicCategoryPage extends StatelessWidget {
                             Icon(Icons.star, color: Colors.yellow, size: 12),
                             Icon(Icons.star, color: Colors.yellow, size: 12),
                             Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.cyan[900], size: 12),
+                            Icon(Icons.star, color: Colors.red[900], size: 12),
                             Text(
                               '   (69)',
                               style: TextStyle(
@@ -396,7 +405,7 @@ class AerobicCategoryPage extends StatelessWidget {
                             Icon(Icons.star, color: Colors.yellow, size: 12),
                             Icon(Icons.star, color: Colors.yellow, size: 12),
                             Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.cyan[900], size: 12),
+                            Icon(Icons.star, color: Colors.red[900], size: 12),
                             Text(
                               '   (1449)',
                               style: TextStyle(
@@ -506,7 +515,7 @@ class AerobicCategoryPage extends StatelessWidget {
                             Icon(Icons.star, color: Colors.yellow, size: 12),
                             Icon(Icons.star, color: Colors.yellow, size: 12),
                             Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.cyan[900], size: 12),
+                            Icon(Icons.star, color: Colors.red[900], size: 12),
                             Text(
                               '   (169)',
                               style: TextStyle(
@@ -630,7 +639,7 @@ class AerobicCategoryPage extends StatelessWidget {
                             Icon(Icons.star, color: Colors.yellow, size: 12),
                             Icon(Icons.star, color: Colors.yellow, size: 12),
                             Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.cyan[900], size: 12),
+                            Icon(Icons.star, color: Colors.red[900], size: 12),
                             Text(
                               '   (1149)',
                               style: TextStyle(
@@ -740,7 +749,7 @@ class AerobicCategoryPage extends StatelessWidget {
                             Icon(Icons.star, color: Colors.yellow, size: 12),
                             Icon(Icons.star, color: Colors.yellow, size: 12),
                             Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.cyan[900], size: 12),
+                            Icon(Icons.star, color: Colors.red[900], size: 12),
                             Text(
                               '   (269)',
                               style: TextStyle(
@@ -864,7 +873,7 @@ class AerobicCategoryPage extends StatelessWidget {
                             Icon(Icons.star, color: Colors.yellow, size: 12),
                             Icon(Icons.star, color: Colors.yellow, size: 12),
                             Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.cyan[900], size: 12),
+                            Icon(Icons.star, color: Colors.red[900], size: 12),
                             Text(
                               '   (1149)',
                               style: TextStyle(
@@ -974,7 +983,7 @@ class AerobicCategoryPage extends StatelessWidget {
                             Icon(Icons.star, color: Colors.yellow, size: 12),
                             Icon(Icons.star, color: Colors.yellow, size: 12),
                             Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.cyan[900], size: 12),
+                            Icon(Icons.star, color: Colors.red[900], size: 12),
                             Text(
                               '   (269)',
                               style: TextStyle(

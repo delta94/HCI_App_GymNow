@@ -3,21 +3,40 @@ import 'package:flutter/material.dart';
 class ShoppingCart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(80),
-        child: Column(
-          children: <Widget>[
-            SizedBox(height: 20),
-            Image.asset('images/logov7.png', scale: 2),
-          ],
-        ),
+    return Container(
+      decoration: BoxDecoration(
+        // color: Colors.black
+        gradient: LinearGradient(
+                    colors: [
+                    Colors.black,
+                    Colors.grey[600],
+                    Colors.black
+                    ],
+                    begin: FractionalOffset.topCenter,
+                    end: FractionalOffset.bottomCenter
+        )
       ),
-      backgroundColor: Colors.cyan[800],
-      body: Column(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
+          Container(
+                padding: EdgeInsets.only(top: 20, bottom: 20),
+                decoration: BoxDecoration(
+                  // color: Colors.black,
+                  
+
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Image.asset(
+                      'images/logov7.png',
+                      scale: 2,
+                    )
+                  ],
+                ),
+              ),
           SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.only(left: 20),
@@ -56,12 +75,11 @@ class ShoppingCart extends StatelessWidget {
             height: 50,
             margin: EdgeInsets.symmetric(horizontal: 70),
             padding: EdgeInsets.only(top: 10),
-            
             decoration: BoxDecoration(
-              color: Colors.cyan[900],
+              color: Colors.red[900],
               boxShadow: [
                 BoxShadow(
-                  color: Colors.cyan[900].withOpacity(0.5),
+                  color: Colors.red[900].withOpacity(0.5),
                   spreadRadius: 5,
                   blurRadius: 7,
                   offset: Offset(0, 3), // changes position of shadow

@@ -42,7 +42,18 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: Colors.cyan[800]),
+      decoration: BoxDecoration(
+        // color: Colors.black
+        gradient: LinearGradient(
+                    colors: [
+                    Colors.black,
+                    Colors.grey[600],
+                    Colors.black
+                    ],
+                    begin: FractionalOffset.topCenter,
+                    end: FractionalOffset.bottomCenter
+        )
+      ),
       child: ListView(
         children: <Widget>[
           Column(
@@ -50,7 +61,11 @@ class _HomePageState extends State<HomePage> {
               //Logo
               Container(
                 padding: EdgeInsets.only(top: 20, bottom: 20),
-                decoration: BoxDecoration(color: Colors.cyan[800]),
+                decoration: BoxDecoration(
+                  // color: Colors.black,
+                  
+
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -66,11 +81,12 @@ class _HomePageState extends State<HomePage> {
                 padding: EdgeInsets.only(right: 10, left: 10),
                 margin: EdgeInsets.only(right: 10, left: 10),
                 decoration: BoxDecoration(
-                    color: Colors.cyan[900],
+                    color: Colors.red[900],
                     borderRadius: new BorderRadius.all(Radius.circular(10))),
                 child: TextField(
                   decoration: InputDecoration(
-                      border: InputBorder.none, prefixIcon: Icon(Icons.search)),
+                      border: InputBorder.none, prefixIcon: Icon(Icons.search),
+                      ),
                   style: TextStyle(color: Colors.white),
                 ),
               ),
@@ -106,7 +122,7 @@ class _HomePageState extends State<HomePage> {
                                 width: MediaQuery.of(context).size.width,
                                 margin: EdgeInsets.symmetric(horizontal: 10.0),
                                 decoration: BoxDecoration(
-                                  color: Colors.cyan[900],
+                                  color: Colors.red[900],
                                 ),
                                 child: Image.asset(
                                   imgUrl,
@@ -132,7 +148,7 @@ class _HomePageState extends State<HomePage> {
                         EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: current == index ? Colors.white : Colors.cyan[900],
+                      color: current == index ? Colors.white : Colors.red[900],
                     ),
                   );
                 }),
@@ -173,7 +189,7 @@ class _HomePageState extends State<HomePage> {
                         width: screenWidth(context, dividedBy: 5),
                         height: screenWidth(context, dividedBy: 5),
                         decoration: BoxDecoration(
-                          color: Colors.cyan[900],
+                          color: Colors.red[900],
                           borderRadius: BorderRadius.all(Radius.circular(5)),
                         ),
                         child: Padding(
@@ -202,7 +218,7 @@ class _HomePageState extends State<HomePage> {
                         width: screenWidth(context, dividedBy: 5),
                         height: screenWidth(context, dividedBy: 5),
                         decoration: BoxDecoration(
-                          color: Colors.cyan[900],
+                          color: Colors.red[900],
                           borderRadius: BorderRadius.all(Radius.circular(5)),
                         ),
                         child: Padding(
@@ -231,7 +247,7 @@ class _HomePageState extends State<HomePage> {
                         width: screenWidth(context, dividedBy: 5),
                         height: screenWidth(context, dividedBy: 5),
                         decoration: BoxDecoration(
-                          color: Colors.cyan[900],
+                          color: Colors.red[900],
                           borderRadius: BorderRadius.all(Radius.circular(5)),
                         ),
                         child: Padding(
@@ -260,7 +276,7 @@ class _HomePageState extends State<HomePage> {
                         width: screenWidth(context, dividedBy: 5),
                         height: screenWidth(context, dividedBy: 5),
                         decoration: BoxDecoration(
-                          color: Colors.cyan[900],
+                          color: Colors.red[900],
                           borderRadius: BorderRadius.all(Radius.circular(5)),
                         ),
                         child: Padding(
@@ -358,7 +374,7 @@ class _HomePageState extends State<HomePage> {
                                       Icon(Icons.star,
                                           color: Colors.yellow, size: 12),
                                       Icon(Icons.star,
-                                          color: Colors.cyan[900], size: 12),
+                                          color: Colors.red[900], size: 12),
                                       Text(
                                         '   (169)',
                                         style:
@@ -410,7 +426,7 @@ class _HomePageState extends State<HomePage> {
                                       Text(
                                         '20\$',
                                         style: TextStyle(
-                                            color: Colors.red,
+                                            color: Colors.red[900],
                                             fontSize: 15,
                                             fontWeight: FontWeight.bold),
                                       ),
@@ -462,7 +478,7 @@ class _HomePageState extends State<HomePage> {
                                         Icon(Icons.star,
                                             color: Colors.yellow, size: 12),
                                         Icon(Icons.star,
-                                            color: Colors.cyan[900], size: 12),
+                                            color: Colors.red[900], size: 12),
                                         Text(
                                           '   (58)',
                                           style: TextStyle(
@@ -516,7 +532,7 @@ class _HomePageState extends State<HomePage> {
                                         Text(
                                           '10\$',
                                           style: TextStyle(
-                                              color: Colors.red,
+                                              color: Colors.red[900],
                                               fontSize: 15,
                                               fontWeight: FontWeight.bold),
                                         ),
@@ -569,7 +585,7 @@ class _HomePageState extends State<HomePage> {
                                         Icon(Icons.star,
                                             color: Colors.yellow, size: 12),
                                         Icon(Icons.star,
-                                            color: Colors.cyan[900], size: 12),
+                                            color: Colors.red[900], size: 12),
                                         Text(
                                           '   (74)',
                                           style: TextStyle(
@@ -623,7 +639,7 @@ class _HomePageState extends State<HomePage> {
                                         Text(
                                           '11\$',
                                           style: TextStyle(
-                                              color: Colors.red,
+                                              color: Colors.red[900],
                                               fontSize: 15,
                                               fontWeight: FontWeight.bold),
                                         ),
@@ -679,7 +695,7 @@ class _HomePageState extends State<HomePage> {
                                         Icon(Icons.star,
                                             color: Colors.yellow, size: 12),
                                         Icon(Icons.star,
-                                            color: Colors.cyan[900], size: 12),
+                                            color: Colors.red[900], size: 12),
                                         Text(
                                           '   (63)',
                                           style: TextStyle(
@@ -733,7 +749,7 @@ class _HomePageState extends State<HomePage> {
                                         Text(
                                           '10\$',
                                           style: TextStyle(
-                                              color: Colors.red,
+                                              color: Colors.red[900],
                                               fontSize: 15,
                                               fontWeight: FontWeight.bold),
                                         ),
@@ -887,7 +903,7 @@ class _HomePageState extends State<HomePage> {
                                       Text(
                                         '25\$',
                                         style: TextStyle(
-                                            color: Colors.red,
+                                            color: Colors.red[900],
                                             fontSize: 15,
                                             fontWeight: FontWeight.bold),
                                       ),
@@ -993,7 +1009,7 @@ class _HomePageState extends State<HomePage> {
                                         Text(
                                           '20\$',
                                           style: TextStyle(
-                                              color: Colors.red,
+                                              color: Colors.red[900],
                                               fontSize: 15,
                                               fontWeight: FontWeight.bold),
                                         ),
@@ -1046,7 +1062,7 @@ class _HomePageState extends State<HomePage> {
                                         Icon(Icons.star,
                                             color: Colors.yellow, size: 12),
                                         Icon(Icons.star,
-                                            color: Colors.cyan[900], size: 12),
+                                            color: Colors.red[900], size: 12),
                                         Text(
                                           '   (1080)',
                                           style: TextStyle(
@@ -1100,7 +1116,7 @@ class _HomePageState extends State<HomePage> {
                                         Text(
                                           '11\$',
                                           style: TextStyle(
-                                              color: Colors.red,
+                                              color: Colors.red[900],
                                               fontSize: 15,
                                               fontWeight: FontWeight.bold),
                                         ),
@@ -1156,7 +1172,7 @@ class _HomePageState extends State<HomePage> {
                                         Icon(Icons.star,
                                             color: Colors.yellow, size: 12),
                                         Icon(Icons.star,
-                                            color: Colors.cyan[900], size: 12),
+                                            color: Colors.red[900], size: 12),
                                         Text(
                                           '   (998)',
                                           style: TextStyle(
@@ -1210,7 +1226,7 @@ class _HomePageState extends State<HomePage> {
                                         Text(
                                           '15\$',
                                           style: TextStyle(
-                                              color: Colors.red,
+                                              color: Colors.red[900],
                                               fontSize: 15,
                                               fontWeight: FontWeight.bold),
                                         ),
