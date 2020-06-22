@@ -3,7 +3,6 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:gym_app/home-page-v2.dart';
 import 'package:gym_app/homepage.dart';
 import 'package:gym_app/mepage.dart';
-import 'package:gym_app/shopping_cart.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,7 +27,6 @@ class GymAppState extends State {
   final List<Widget> listWidget = [
     HomePageV2(),
     HomePage(),
-    ShoppingCart(),
     Container(),
     MePage(),
 
@@ -66,14 +64,8 @@ class GymAppState extends State {
               backgroundColor: Colors.red[900]
             ),
             BottomNavigationBarItem(
-              icon: Icon(AntDesign.shoppingcart),
-              title: Text('Cart'),
-              // backgroundColor: Colors.cyan[900]
-              backgroundColor: Colors.red[900]
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Octicons.report),
-              title: Text('Report'),
+              icon: Icon(Entypo.wallet),
+              title: Text('Payment'),
               // backgroundColor: Colors.cyan[900]
               backgroundColor: Colors.red[900]
             ),
