@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:gym_app/profile-page.dart';
 import 'package:gym_app/searchpage.dart';
 
 import 'category-aerobicpage.dart';
@@ -409,7 +410,7 @@ class _HomePageV2State extends State<HomePageV2> {
                             bottom: 5
                           ),
                           child: Text(
-                            'Hot PT',
+                            'Hot coach',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 30
@@ -423,7 +424,7 @@ class _HomePageV2State extends State<HomePageV2> {
                               right: 20
                             ),
                             child: Text(
-                              'See full PT',
+                              'See full coach',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontStyle: FontStyle.italic
@@ -435,214 +436,281 @@ class _HomePageV2State extends State<HomePageV2> {
                       ],
                     ),
                     //Item 1
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.grey[850],
-                        borderRadius: BorderRadius.circular(5)
-                      ),
-                      margin: EdgeInsets.only(
-                        left: 8,
-                        right: 8,
-                        bottom: 10
-                      ),
-                      padding: EdgeInsets.only(
-                        left: 12,
-                        top: 15,
-                        right: 12,
-                        bottom: 15
-                      ),
-                      
-                      child: Column(
-                        children: <Widget>[
-                          //Image & Rent
-                          Container(
-                            padding: EdgeInsets.only(
-                              bottom: 5
-                            ),
-                            child: Row(
-                              children: <Widget>[
-                                Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.all(Radius.circular(50))
-                                  ),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(50),
-                                    child: Image.asset(
-                                      'images/marc-fitt.jpg',
-                                      height: 100,
-                                      width: 100,
+                    new GestureDetector(
+                      onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => ProfilePage()),
+                              );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.grey[850],
+                          borderRadius: BorderRadius.circular(5)
+                        ),
+                        margin: EdgeInsets.only(
+                          left: 8,
+                          right: 8,
+                          bottom: 10
+                        ),
+                        padding: EdgeInsets.only(
+                          left: 12,
+                          top: 15,
+                          right: 12,
+                          bottom: 15
+                        ),
+                        
+                        child: Column(
+                          children: <Widget>[
+                            //Image & Rent
+                            Container(
+                              padding: EdgeInsets.only(
+                                bottom: 5
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(Radius.circular(50))
+                                    ),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(50),
+                                      child: Image.asset(
+                                        'images/marc-fitt.jpg',
+                                        height: 100,
+                                        width: 100,
+                                      ),
                                     ),
                                   ),
-                                ),
-                                Expanded(
-                                  child: Row(
-                                    children: <Widget>[
-                                    Container(
-                                      padding: EdgeInsets.only(
-                                        left: 10
-                                      ),
-                                    child: Column(
+                                  Expanded(
+                                    child: Row(
                                       children: <Widget>[
-                                        Container(
-                                          width: 150,
-                                          child: Text(
-                                            'Marc Fitt',
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 15
-                                            ),
-                                          ),
+                                      Container(
+                                        padding: EdgeInsets.only(
+                                          left: 10
                                         ),
-                                        Container(
-                                          padding: EdgeInsets.only(
-                                            top: 5
-                                          ),
-                                          width: 150,
-                                          child: Text(
-                                            'Gym PT',
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 10
-                                            ),
-                                            textAlign: TextAlign.left,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  )
-                                    ],
-                                  ),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.red[900],
-                                    borderRadius: BorderRadius.circular(5)
-                                  ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Text(
-                                          'Rent',
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold
-                                          ),
-                                      ),
-                                    ),
-                                  ),
-                              ],
-                            ),
-                          ),
-                          Divider(
-                            color: Colors.white,
-                          ),
-                          // Information  
-                          Row(
-                            children: <Widget>[
-                              Expanded(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: <Widget>[
-                                    Row(
-                                      children: <Widget>[
-                                        Icon(
-                                          Entypo.ruler,
-                                          color: Colors.white,
-                                          size: 15,
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.only(
-                                            left: 10
-                                          ),
-                                          child: Text(
-                                            '1m83',
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(
-                                        top: 5
-                                      ),
-                                      child: Row(
+                                      child: Column(
                                         children: <Widget>[
-                                          Icon(
-                                            MaterialCommunityIcons.weight_kilogram,
-                                            color: Colors.white,
-                                            size: 15,
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.only(
-                                              left: 10
-                                            ),
+                                          Container(
+                                            width: 150,
                                             child: Text(
-                                              '93 Kg',
+                                              'Marc Fitt',
                                               style: TextStyle(
-                                              color: Colors.white,
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 15
                                               ),
                                             ),
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(
-                                        top: 5
-                                      ),
-                                      child: Row(
-                                        children: <Widget>[
-                                          Icon(
-                                            Entypo.location_pin,
-                                            color: Colors.white,
-                                            size: 15,
                                           ),
-                                          Padding(
+                                          Container(
                                             padding: EdgeInsets.only(
-                                              left: 10
+                                              top: 5
                                             ),
+                                            width: 150,
                                             child: Text(
-                                              'Califonia',
+                                              'Gym coach',
                                               style: TextStyle(
-                                              color: Colors.white,
+                                                color: Colors.white,
+                                                fontSize: 10
                                               ),
+                                              textAlign: TextAlign.left,
                                             ),
                                           )
                                         ],
                                       ),
                                     )
-                                  ],
-                                ),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.red[900],
+                                      borderRadius: BorderRadius.circular(5)
+                                    ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                            'Rent',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.bold
+                                            ),
+                                        ),
+                                      ),
+                                    ),
+                                ],
                               ),
-                              Container(
-                                  child: Row(
+                            ),
+                            Divider(
+                              color: Colors.white,
+                            ),
+                            // Information  
+                            Row(
+                              children: <Widget>[
+                                Expanded(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: <Widget>[
-                                      Icon(
-                                        Entypo.price_tag,
-                                        color: Colors.red[900],
+                                      Row(
+                                        children: <Widget>[
+                                          Icon(
+                                            Entypo.ruler,
+                                            color: Colors.white,
+                                            size: 15,
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                              left: 10
+                                            ),
+                                            child: Text(
+                                              '1m83',
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          )
+                                        ],
                                       ),
                                       Padding(
                                         padding: EdgeInsets.only(
-                                          left:5
+                                          top: 5
                                         ),
-                                        child: Text(
-                                          '25\$/month',
-                                          style: TextStyle(
-                                            color: Colors.red[900],
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20
-                                          ),
+                                        child: Row(
+                                          children: <Widget>[
+                                            Icon(
+                                              MaterialCommunityIcons.weight_kilogram,
+                                              color: Colors.white,
+                                              size: 15,
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                left: 10
+                                              ),
+                                              child: Text(
+                                                '93 Kg',
+                                                style: TextStyle(
+                                                color: Colors.white,
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                          top: 5
+                                        ),
+                                        child: Row(
+                                          children: <Widget>[
+                                            Icon(
+                                              Entypo.location_pin,
+                                              color: Colors.white,
+                                              size: 15,
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                left: 10
+                                              ),
+                                              child: Text(
+                                                'Califonia',
+                                                style: TextStyle(
+                                                color: Colors.white,
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                          top: 5
+                                        ),
+                                        child: Row(
+                                          children: <Widget>[
+                                            Icon(
+                                              MaterialIcons.rate_review,
+                                              color: Colors.white,
+                                              size: 15,
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                left: 10
+                                              ),
+                                              child: Row(
+                                                children: <Widget>[
+                                                  Icon(
+                                                    FontAwesome.star,
+                                                    color: Colors.yellow,
+                                                    size: 13,
+                                                  ),
+                                                  Icon(
+                                                    FontAwesome.star,
+                                                    color: Colors.yellow,
+                                                    size: 13,
+                                                  ),
+                                                  Icon(
+                                                    FontAwesome.star,
+                                                    color: Colors.yellow,
+                                                    size: 13,
+                                                  ),
+                                                  Icon(
+                                                    FontAwesome.star,
+                                                    color: Colors.yellow,
+                                                    size: 13,
+                                                  ),
+                                                  Icon(
+                                                    FontAwesome.star,
+                                                    color: Colors.yellow,
+                                                    size: 13,
+                                                  ),
+                                                  Padding(
+                                                    padding: EdgeInsets.only(
+                                                      left: 5
+                                                    ),
+                                                    child: Text(
+                                                      '(11448)',
+                                                      style: TextStyle(
+                                                        color: Colors.white
+                                                      ),
+                                                    ),
+                                                  )
+                                                ],
+                                              ),
+                                            )
+                                          ],
                                         ),
                                       )
                                     ],
                                   ),
-                                )
-                            ],
-                          ),
-                        ],
+                                ),
+                                Container(
+                                    child: Row(
+                                      children: <Widget>[
+                                        Icon(
+                                          Entypo.price_tag,
+                                          color: Colors.red[900],
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(
+                                            left:5
+                                          ),
+                                          child: Text(
+                                            '25\$/month',
+                                            style: TextStyle(
+                                              color: Colors.red[900],
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 20
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  )
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     //Item 2
@@ -711,7 +779,7 @@ class _HomePageV2State extends State<HomePageV2> {
                                           ),
                                           width: 150,
                                           child: Text(
-                                            'Gym PT',
+                                            'Gym coach',
                                             style: TextStyle(
                                               color: Colors.white,
                                               fontSize: 10
@@ -824,6 +892,65 @@ class _HomePageV2State extends State<HomePageV2> {
                                           )
                                         ],
                                       ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                        top: 5
+                                      ),
+                                      child: Row(
+                                        children: <Widget>[
+                                          Icon(
+                                            MaterialIcons.rate_review,
+                                            color: Colors.white,
+                                            size: 15,
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                              left: 10
+                                            ),
+                                            child: Row(
+                                              children: <Widget>[
+                                                Icon(
+                                                  FontAwesome.star,
+                                                  color: Colors.yellow,
+                                                  size: 13,
+                                                ),
+                                                Icon(
+                                                  FontAwesome.star,
+                                                  color: Colors.yellow,
+                                                  size: 13,
+                                                ),
+                                                Icon(
+                                                  FontAwesome.star,
+                                                  color: Colors.yellow,
+                                                  size: 13,
+                                                ),
+                                                Icon(
+                                                  FontAwesome.star,
+                                                  color: Colors.yellow,
+                                                  size: 13,
+                                                ),
+                                                Icon(
+                                                  FontAwesome.star_half_empty,
+                                                  color: Colors.yellow,
+                                                  size: 13,
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsets.only(
+                                                    left: 5
+                                                  ),
+                                                  child: Text(
+                                                    '(10520)',
+                                                    style: TextStyle(
+                                                      color: Colors.white
+                                                    ),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                          )
+                                        ],
+                                      ),
                                     )
                                   ],
                                 ),
@@ -922,7 +1049,7 @@ class _HomePageV2State extends State<HomePageV2> {
                                           ),
                                           width: 150,
                                           child: Text(
-                                            'Gym PT',
+                                            'Gym coach',
                                             style: TextStyle(
                                               color: Colors.white,
                                               fontSize: 10
@@ -1035,6 +1162,65 @@ class _HomePageV2State extends State<HomePageV2> {
                                           )
                                         ],
                                       ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                        top: 5
+                                      ),
+                                      child: Row(
+                                        children: <Widget>[
+                                          Icon(
+                                            MaterialIcons.rate_review,
+                                            color: Colors.white,
+                                            size: 15,
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                              left: 10
+                                            ),
+                                            child: Row(
+                                              children: <Widget>[
+                                                Icon(
+                                                  FontAwesome.star,
+                                                  color: Colors.yellow,
+                                                  size: 13,
+                                                ),
+                                                Icon(
+                                                  FontAwesome.star,
+                                                  color: Colors.yellow,
+                                                  size: 13,
+                                                ),
+                                                Icon(
+                                                  FontAwesome.star,
+                                                  color: Colors.yellow,
+                                                  size: 13,
+                                                ),
+                                                Icon(
+                                                  FontAwesome.star,
+                                                  color: Colors.yellow,
+                                                  size: 13,
+                                                ),
+                                                Icon(
+                                                  FontAwesome.star,
+                                                  color: Colors.yellow,
+                                                  size: 13,
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsets.only(
+                                                    left: 5
+                                                  ),
+                                                  child: Text(
+                                                    '(9753)',
+                                                    style: TextStyle(
+                                                      color: Colors.white
+                                                    ),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                          )
+                                        ],
+                                      ),
                                     )
                                   ],
                                 ),
@@ -1133,7 +1319,7 @@ class _HomePageV2State extends State<HomePageV2> {
                                           ),
                                           width: 150,
                                           child: Text(
-                                            'Yoga PT',
+                                            'Yoga coach',
                                             style: TextStyle(
                                               color: Colors.white,
                                               fontSize: 10
@@ -1242,6 +1428,65 @@ class _HomePageV2State extends State<HomePageV2> {
                                               style: TextStyle(
                                               color: Colors.white,
                                               ),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                        top: 5
+                                      ),
+                                      child: Row(
+                                        children: <Widget>[
+                                          Icon(
+                                            MaterialIcons.rate_review,
+                                            color: Colors.white,
+                                            size: 15,
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(
+                                              left: 10
+                                            ),
+                                            child: Row(
+                                              children: <Widget>[
+                                                Icon(
+                                                  FontAwesome.star,
+                                                  color: Colors.yellow,
+                                                  size: 13,
+                                                ),
+                                                Icon(
+                                                  FontAwesome.star,
+                                                  color: Colors.yellow,
+                                                  size: 13,
+                                                ),
+                                                Icon(
+                                                  FontAwesome.star,
+                                                  color: Colors.yellow,
+                                                  size: 13,
+                                                ),
+                                                Icon(
+                                                  FontAwesome.star,
+                                                  color: Colors.yellow,
+                                                  size: 13,
+                                                ),
+                                                Icon(
+                                                  FontAwesome.star,
+                                                  color: Colors.yellow,
+                                                  size: 13,
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsets.only(
+                                                    left: 5
+                                                  ),
+                                                  child: Text(
+                                                    '(7979)',
+                                                    style: TextStyle(
+                                                      color: Colors.white
+                                                    ),
+                                                  ),
+                                                )
+                                              ],
                                             ),
                                           )
                                         ],
