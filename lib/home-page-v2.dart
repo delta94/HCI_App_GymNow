@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:gym_app/profile-page.dart';
+import 'package:gym_app/profile-marcfitt-page.dart';
 import 'package:gym_app/searchpage.dart';
 
 import 'category-aerobicpage.dart';
