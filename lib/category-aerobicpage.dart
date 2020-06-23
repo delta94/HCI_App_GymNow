@@ -18,16 +18,16 @@ class AerobicCategoryPage extends StatelessWidget {
         bottom: 20
       ),
       decoration: BoxDecoration(
-        // color: Colors.red[800]
-        gradient: LinearGradient(
-                    colors: [
-                    Colors.black,
-                    Colors.grey[600],
-                    Colors.black
-                    ],
-                    begin: FractionalOffset.topCenter,
-                    end: FractionalOffset.bottomCenter
-        )
+        color: Colors.black
+        // gradient: LinearGradient(
+        //             colors: [
+        //             Colors.black,
+        //             Colors.grey[600],
+        //             Colors.black
+        //             ],
+        //             begin: FractionalOffset.topCenter,
+        //             end: FractionalOffset.bottomCenter
+        // )
       ),
       child: ListView(
         children: <Widget>[
@@ -141,941 +141,1487 @@ class AerobicCategoryPage extends StatelessWidget {
             ],
           ),
           //Items Line 1
-          Padding(
-            padding: EdgeInsets.only(
-              top: 20,
-              left: 20,
-              right: 20
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.grey[850],
+              borderRadius: BorderRadius.circular(5)
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            margin: EdgeInsets.only(
+              left: 8,
+              right: 8,
+              bottom: 10,
+              top: 10
+            ),
+            padding: EdgeInsets.only(
+              left: 12,
+              top: 15,
+              right: 12,
+              bottom: 15
+            ),
+            
+            child: Column(
               children: <Widget>[
+                //Image & Rent
                 Container(
-                  child: Column(
+                  padding: EdgeInsets.only(
+                    bottom: 5
+                  ),
+                  child: Row(
                     children: <Widget>[
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(5),
-                        child: Image.asset(
-                                "images/lazar-angelov.jpg",
-                                width: screenWidth(context, dividedBy: 2.3),
-                                height: 100,
-                                fit: BoxFit.fill,
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(50))
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(50),
+                          child: Image.asset(
+                            'images/marc-fitt.jpg',
+                            height: 100,
+                            width: 100,
+                          ),
                         ),
                       ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.red[900], size: 12),
-                            Text(
-                              '   (119)',
-                              style: TextStyle(
-                                color: Colors.grey[400],
-                                fontSize: 13,
-                                decoration: TextDecoration.none,
-                                fontWeight: FontWeight.normal,
-                                fontFamily: 'Calibri'
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Flexible(
-                              child: RichText(
-                                overflow: TextOverflow.ellipsis,
-                                strutStyle: StrutStyle(fontSize: 20.0),
-                                text: TextSpan(
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 17
-                                  ),
-                                  text: 'Lazar Angelov'),
-                                  maxLines: 2,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text(
-                              '1m80 - 90kg',
-                              style: TextStyle(
-                                color: Colors.grey[400],
-                                fontSize: 10,
-                                decoration: TextDecoration.none,
-                                fontWeight: FontWeight.normal,
-                                fontFamily: 'Calibri'
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
+                      Expanded(
                         child: Row(
                           children: <Widget>[
-                            Text(
-                              '20\$',
-                              style: TextStyle(
-                                color: Colors.red,
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                                decoration: TextDecoration.none,
-                                fontFamily: 'Calibri'
-                              ),
+                          Container(
+                            padding: EdgeInsets.only(
+                              left: 10
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                left: 10
-                              ),
-                              child: Text(
-                                '200\$',
-                                style: TextStyle(
-                                  color: Colors.grey[400],
-                                  fontSize: 15,
-                                  decoration: TextDecoration.lineThrough,
-                                  decorationColor: Colors.grey,
-                                  fontWeight: FontWeight.normal,
-                                  fontFamily: 'Calibri'
+                          child: Column(
+                            children: <Widget>[
+                              Container(
+                                width: 150,
+                                child: Text(
+                                  'Marc Fitt',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none
+                                  ),
+                                  
                                 ),
                               ),
-                            )
+                              Container(
+                                padding: EdgeInsets.only(
+                                  top: 5
+                                ),
+                                width: 150,
+                                child: Text(
+                                  'Gym coach',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.normal,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none
+                                  ),
+                                  textAlign: TextAlign.left,
+                                ),
+                              )
+                            ],
+                          ),
+                        )
                           ],
                         ),
-                      )
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.red[900],
+                          borderRadius: BorderRadius.circular(5)
+                        ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                                'Rent',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Calibri',
+                                  decoration: TextDecoration.none
+                                ),
+                            ),
+                          ),
+                        ),
                     ],
                   ),
                 ),
-                Container(
-                  child: Column(
-                    children: <Widget>[
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(5),
-                        child: Image.asset(
-                                "images/marc.jpg",
-                                width: screenWidth(context, dividedBy: 2.3),
-                                height: 100,
-                                fit: BoxFit.fill,
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.red[900], size: 12),
-                            Text(
-                              '   (69)',
-                              style: TextStyle(
-                                color: Colors.grey[400],
-                                fontSize: 13,
-                                decoration: TextDecoration.none,
-                                fontWeight: FontWeight.normal,
-                                fontFamily: 'Calibri'
+                Divider(
+                  color: Colors.white,
+                ),
+                // Information  
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Icon(
+                                Entypo.ruler,
+                                color: Colors.white,
+                                size: 15,
                               ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Flexible(
-                              child: RichText(
-                                overflow: TextOverflow.ellipsis,
-                                strutStyle: StrutStyle(fontSize: 20.0),
-                                text: TextSpan(
+                              Padding(
+                                padding: EdgeInsets.only(
+                                  left: 10
+                                ),
+                                child: Text(
+                                  '1m83',
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 17,
-                                    fontFamily: 'Calibri'
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 15
                                   ),
-                                  text: 'Marc Fitt'),
-                                  maxLines: 2,
-                              ),
+                                ),
+                              )
+                            ],
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 5
                             ),
-                          ],
-                        ),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(
+                                  MaterialCommunityIcons.weight_kilogram,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 10
+                                  ),
+                                  child: Text(
+                                    '93 Kg',
+                                    style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 15
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 5
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(
+                                  Entypo.location_pin,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 10
+                                  ),
+                                  child: Text(
+                                    'Califonia',
+                                    style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 15
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 5
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(
+                                  MaterialIcons.rate_review,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 10
+                                  ),
+                                  child: Row(
+                                    children: <Widget>[
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                          left: 5
+                                        ),
+                                        child: Text(
+                                          '(11448)',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: 'Calibri',
+                                            decoration: TextDecoration.none,
+                                            fontWeight: FontWeight.normal,
+                                            fontSize: 15
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
                       ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text(
-                              '1m83 - 93kg',
-                              style: TextStyle(
-                                color: Colors.grey[400],
-                                fontSize: 10,
-                                decoration: TextDecoration.none,
-                                fontWeight: FontWeight.normal,
-                                fontFamily: 'Calibri'
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
+                    ),
+                    Container(
                         child: Row(
                           children: <Widget>[
-                            Text(
-                              '20\$',
-                              style: TextStyle(
-                                color: Colors.red,
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                                decoration: TextDecoration.none,
-                                fontFamily: 'Calibri'
-                              ),
+                            Icon(
+                              Entypo.price_tag,
+                              color: Colors.red[900],
                             ),
                             Padding(
                               padding: EdgeInsets.only(
-                                left: 10
+                                left:5
                               ),
                               child: Text(
-                                '200\$',
+                                '25\$/month',
                                 style: TextStyle(
-                                  color: Colors.grey[400],
-                                  fontSize: 15,
-                                  decoration: TextDecoration.lineThrough,
-                                  decorationColor: Colors.grey,
-                                  fontWeight: FontWeight.normal,
-                                  fontFamily: 'Calibri'
+                                  color: Colors.red[900],
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  fontFamily: 'Calibri',
+                                  decoration: TextDecoration.none,
                                 ),
                               ),
                             )
                           ],
                         ),
                       )
-                    ],
-                  ),
-                ),        
+                  ],
+                ),
               ],
             ),
           ),
           //Items Line 2
-          Padding(
-            padding: EdgeInsets.only(
-              top: 20,
-              left: 20,
-              right: 20
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.grey[850],
+              borderRadius: BorderRadius.circular(5)
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            margin: EdgeInsets.only(
+              left: 8,
+              right: 8,
+              bottom: 10
+            ),
+            padding: EdgeInsets.only(
+              left: 12,
+              top: 15,
+              right: 12,
+              bottom: 15
+            ),
+            
+            child: Column(
               children: <Widget>[
+                //Image & Rent
                 Container(
-                  child: Column(
+                  padding: EdgeInsets.only(
+                    bottom: 5
+                  ),
+                  child: Row(
                     children: <Widget>[
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(5),
-                        child: Image.asset(
-                                "images/cellena-fox.jpg",
-                                width: screenWidth(context, dividedBy: 2.3),
-                                height: 100,
-                                fit: BoxFit.fill,
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(50))
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(50),
+                          child: Image.asset(
+                            'images/paige-hathaway.jpg',
+                            height: 100,
+                            width: 100,
+                          ),
                         ),
                       ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.red[900], size: 12),
-                            Text(
-                              '   (1449)',
-                              style: TextStyle(
-                                color: Colors.grey[400],
-                                fontSize: 13,
-                                decoration: TextDecoration.none,
-                                fontWeight: FontWeight.normal,
-                                fontFamily: 'Calibri'
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Flexible(
-                              child: RichText(
-                                overflow: TextOverflow.ellipsis,
-                                strutStyle: StrutStyle(fontSize: 20.0),
-                                text: TextSpan(
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 17
-                                  ),
-                                  text: 'Cellena Fox'),
-                                  maxLines: 2,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text(
-                              '1m68 - 99-65-98',
-                              style: TextStyle(
-                                color: Colors.grey[400],
-                                fontSize: 10,
-                                decoration: TextDecoration.none,
-                                fontWeight: FontWeight.normal,
-                                fontFamily: 'Calibri'
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
+                      Expanded(
                         child: Row(
                           children: <Widget>[
-                            Text(
-                              '20\$',
-                              style: TextStyle(
-                                color: Colors.red,
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                                decoration: TextDecoration.none,
-                                fontFamily: 'Calibri'
-                              ),
+                          Container(
+                            padding: EdgeInsets.only(
+                              left: 10
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                left: 10
-                              ),
-                              child: Text(
-                                '200\$',
-                                style: TextStyle(
-                                  color: Colors.grey[400],
-                                  fontSize: 15,
-                                  decoration: TextDecoration.lineThrough,
-                                  decorationColor: Colors.grey,
-                                  fontWeight: FontWeight.normal,
-                                  fontFamily: 'Calibri'
+                          child: Column(
+                            children: <Widget>[
+                              Container(
+                                width: 150,
+                                child: Text(
+                                  'Paige Hathaway',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none
+                                  ),
+                                  
                                 ),
                               ),
-                            )
+                              Container(
+                                padding: EdgeInsets.only(
+                                  top: 5
+                                ),
+                                width: 150,
+                                child: Text(
+                                  'Gym coach',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.normal,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none
+                                  ),
+                                  textAlign: TextAlign.left,
+                                ),
+                              )
+                            ],
+                          ),
+                        )
                           ],
                         ),
-                      )
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.red[900],
+                          borderRadius: BorderRadius.circular(5)
+                        ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                                'Rent',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Calibri',
+                                  decoration: TextDecoration.none
+                                ),
+                            ),
+                          ),
+                        ),
                     ],
                   ),
                 ),
-                Container(
-                  child: Column(
-                    children: <Widget>[
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(5),
-                        child: Image.asset(
-                                "images/the-rock.png",
-                                width: screenWidth(context, dividedBy: 2.3),
-                                height: 100,
-                                fit: BoxFit.fill,
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.red[900], size: 12),
-                            Text(
-                              '   (169)',
-                              style: TextStyle(
-                                color: Colors.grey[400],
-                                fontSize: 13,
-                                decoration: TextDecoration.none,
-                                fontWeight: FontWeight.normal,
-                                fontFamily: 'Calibri'
+                Divider(
+                  color: Colors.white,
+                ),
+                // Information  
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Icon(
+                                Entypo.ruler,
+                                color: Colors.white,
+                                size: 15,
                               ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Flexible(
-                              child: RichText(
-                                overflow: TextOverflow.ellipsis,
-                                strutStyle: StrutStyle(fontSize: 20.0),
-                                text: TextSpan(
+                              Padding(
+                                padding: EdgeInsets.only(
+                                  left: 10
+                                ),
+                                child: Text(
+                                  '1m67',
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 17,
-                                    fontFamily: 'Calibri'
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 15
                                   ),
-                                  text: 'The Rock'),
-                                  maxLines: 2,
-                              ),
+                                ),
+                              )
+                            ],
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 5
                             ),
-                          ],
-                        ),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(
+                                  Ionicons.ios_body,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 10
+                                  ),
+                                  child: Text(
+                                    '96-60-99',
+                                    style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 15
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 5
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(
+                                  Entypo.location_pin,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 10
+                                  ),
+                                  child: Text(
+                                    'New York',
+                                    style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 15
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 5
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(
+                                  MaterialIcons.rate_review,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 10
+                                  ),
+                                  child: Row(
+                                    children: <Widget>[
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star_half_empty,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                          left: 5
+                                        ),
+                                        child: Text(
+                                          '(10520)',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: 'Calibri',
+                                            decoration: TextDecoration.none,
+                                            fontWeight: FontWeight.normal,
+                                            fontSize: 15
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
                       ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text(
-                              '1m80 - 100kg',
-                              style: TextStyle(
-                                color: Colors.grey[400],
-                                fontSize: 10,
-                                decoration: TextDecoration.none,
-                                fontWeight: FontWeight.normal,
-                                fontFamily: 'Calibri'
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
+                    ),
+                    Container(
                         child: Row(
                           children: <Widget>[
-                            Text(
-                              '20\$',
-                              style: TextStyle(
-                                color: Colors.red,
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                                decoration: TextDecoration.none,
-                                fontFamily: 'Calibri'
-                              ),
+                            Icon(
+                              Entypo.price_tag,
+                              color: Colors.red[900],
                             ),
                             Padding(
                               padding: EdgeInsets.only(
-                                left: 10
+                                left:5
                               ),
                               child: Text(
-                                '200\$',
+                                '15\$/month',
                                 style: TextStyle(
-                                  color: Colors.grey[400],
-                                  fontSize: 15,
-                                  decoration: TextDecoration.lineThrough,
-                                  decorationColor: Colors.grey,
-                                  fontWeight: FontWeight.normal,
-                                  fontFamily: 'Calibri'
+                                  color: Colors.red[900],
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  fontFamily: 'Calibri',
+                                  decoration: TextDecoration.none,
                                 ),
                               ),
                             )
                           ],
                         ),
                       )
-                    ],
-                  ),
-                ),        
+                  ],
+                ),
               ],
             ),
           ),
           //Items line 3
-          Padding(
-            padding: EdgeInsets.only(
-              top: 20,
-              left: 20,
-              right: 20
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.grey[850],
+              borderRadius: BorderRadius.circular(5)
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            margin: EdgeInsets.only(
+              left: 8,
+              right: 8,
+              bottom: 10,
+            ),
+            padding: EdgeInsets.only(
+              left: 12,
+              top: 15,
+              right: 12,
+              bottom: 15
+            ),
+            
+            child: Column(
               children: <Widget>[
+                //Image & Rent
                 Container(
-                  child: Column(
+                  padding: EdgeInsets.only(
+                    bottom: 5
+                  ),
+                  child: Row(
                     children: <Widget>[
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(5),
-                        child: Image.asset(
-                                "images/Jennifer-Nicole-Lee.jpg",
-                                width: screenWidth(context, dividedBy: 2.3),
-                                height: 100,
-                                fit: BoxFit.fill,
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(50))
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(50),
+                          child: Image.asset(
+                            'images/sergi-constance.jpg',
+                            height: 100,
+                            width: 100,
+                          ),
                         ),
                       ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.red[900], size: 12),
-                            Text(
-                              '   (1149)',
-                              style: TextStyle(
-                                color: Colors.grey[400],
-                                fontSize: 13,
-                                decoration: TextDecoration.none,
-                                fontWeight: FontWeight.normal,
-                                fontFamily: 'Calibri'
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Flexible(
-                              child: RichText(
-                                overflow: TextOverflow.ellipsis,
-                                strutStyle: StrutStyle(fontSize: 20.0),
-                                text: TextSpan(
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 17
-                                  ),
-                                  text: 'Jennifer Nicole Lee'),
-                                  maxLines: 2,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text(
-                              '1m77 - 91-65-98',
-                              style: TextStyle(
-                                color: Colors.grey[400],
-                                fontSize: 10,
-                                decoration: TextDecoration.none,
-                                fontWeight: FontWeight.normal,
-                                fontFamily: 'Calibri'
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
+                      Expanded(
                         child: Row(
                           children: <Widget>[
-                            Text(
-                              '20\$',
-                              style: TextStyle(
-                                color: Colors.red,
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                                decoration: TextDecoration.none,
-                                fontFamily: 'Calibri'
-                              ),
+                          Container(
+                            padding: EdgeInsets.only(
+                              left: 10
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                left: 10
-                              ),
-                              child: Text(
-                                '200\$',
-                                style: TextStyle(
-                                  color: Colors.grey[400],
-                                  fontSize: 15,
-                                  decoration: TextDecoration.lineThrough,
-                                  decorationColor: Colors.grey,
-                                  fontWeight: FontWeight.normal,
-                                  fontFamily: 'Calibri'
+                          child: Column(
+                            children: <Widget>[
+                              Container(
+                                width: 150,
+                                child: Text(
+                                  'Sergi Constance',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none
+                                  ),
+                                  
                                 ),
                               ),
-                            )
+                              Container(
+                                padding: EdgeInsets.only(
+                                  top: 5
+                                ),
+                                width: 150,
+                                child: Text(
+                                  'Gym coach',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.normal,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none
+                                  ),
+                                  textAlign: TextAlign.left,
+                                ),
+                              )
+                            ],
+                          ),
+                        )
                           ],
                         ),
-                      )
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.red[900],
+                          borderRadius: BorderRadius.circular(5)
+                        ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                                'Rent',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Calibri',
+                                  decoration: TextDecoration.none
+                                ),
+                            ),
+                          ),
+                        ),
                     ],
                   ),
                 ),
-                Container(
-                  child: Column(
-                    children: <Widget>[
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(5),
-                        child: Image.asset(
-                                "images/sergi-constance.jpg",
-                                width: screenWidth(context, dividedBy: 2.3),
-                                height: 100,
-                                fit: BoxFit.fill,
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.red[900], size: 12),
-                            Text(
-                              '   (269)',
-                              style: TextStyle(
-                                color: Colors.grey[400],
-                                fontSize: 13,
-                                decoration: TextDecoration.none,
-                                fontWeight: FontWeight.normal,
-                                fontFamily: 'Calibri'
+                Divider(
+                  color: Colors.white,
+                ),
+                // Information  
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Icon(
+                                Entypo.ruler,
+                                color: Colors.white,
+                                size: 15,
                               ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Flexible(
-                              child: RichText(
-                                overflow: TextOverflow.ellipsis,
-                                strutStyle: StrutStyle(fontSize: 20.0),
-                                text: TextSpan(
+                              Padding(
+                                padding: EdgeInsets.only(
+                                  left: 10
+                                ),
+                                child: Text(
+                                  '1m80',
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 17,
-                                    fontFamily: 'Calibri'
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 15
                                   ),
-                                  text: 'Sergi Constance'),
-                                  maxLines: 2,
-                              ),
+                                ),
+                              )
+                            ],
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 5
                             ),
-                          ],
-                        ),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(
+                                  MaterialCommunityIcons.weight_kilogram,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 10
+                                  ),
+                                  child: Text(
+                                    '90 Kg',
+                                    style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 15
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 5
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(
+                                  Entypo.location_pin,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 10
+                                  ),
+                                  child: Text(
+                                    'Texas',
+                                    style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 15
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 5
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(
+                                  MaterialIcons.rate_review,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 10
+                                  ),
+                                  child: Row(
+                                    children: <Widget>[
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                          left: 5
+                                        ),
+                                        child: Text(
+                                          '(9753)',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: 'Calibri',
+                                            decoration: TextDecoration.none,
+                                            fontWeight: FontWeight.normal,
+                                            fontSize: 15
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
                       ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text(
-                              '1m88 - 90kg',
-                              style: TextStyle(
-                                color: Colors.grey[400],
-                                fontSize: 10,
-                                decoration: TextDecoration.none,
-                                fontWeight: FontWeight.normal,
-                                fontFamily: 'Calibri'
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
+                    ),
+                    Container(
                         child: Row(
                           children: <Widget>[
-                            Text(
-                              '20\$',
-                              style: TextStyle(
-                                color: Colors.red,
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                                decoration: TextDecoration.none,
-                                fontFamily: 'Calibri'
-                              ),
+                            Icon(
+                              Entypo.price_tag,
+                              color: Colors.red[900],
                             ),
                             Padding(
                               padding: EdgeInsets.only(
-                                left: 10
+                                left:5
                               ),
                               child: Text(
-                                '200\$',
+                                '20\$/month',
                                 style: TextStyle(
-                                  color: Colors.grey[400],
-                                  fontSize: 15,
-                                  decoration: TextDecoration.lineThrough,
-                                  decorationColor: Colors.grey,
-                                  fontWeight: FontWeight.normal,
-                                  fontFamily: 'Calibri'
+                                  color: Colors.red[900],
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  fontFamily: 'Calibri',
+                                  decoration: TextDecoration.none,
                                 ),
                               ),
                             )
                           ],
                         ),
                       )
-                    ],
-                  ),
-                ),        
+                  ],
+                ),
               ],
             ),
           ),
           //Items line 4
-          Padding(
-            padding: EdgeInsets.only(
-              top: 20,
-              left: 20,
-              right: 20
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.grey[850],
+              borderRadius: BorderRadius.circular(5)
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            margin: EdgeInsets.only(
+              left: 8,
+              right: 8,
+              bottom: 10
+            ),
+            padding: EdgeInsets.only(
+              left: 12,
+              top: 15,
+              right: 12,
+              bottom: 15
+            ),
+            
+            child: Column(
               children: <Widget>[
+                //Image & Rent
                 Container(
-                  child: Column(
+                  padding: EdgeInsets.only(
+                    bottom: 5
+                  ),
+                  child: Row(
                     children: <Widget>[
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(5),
-                        child: Image.asset(
-                                "images/eva_andressa.jpg",
-                                width: screenWidth(context, dividedBy: 2.3),
-                                height: 100,
-                                fit: BoxFit.fill,
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(50))
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(50),
+                          child: Image.asset(
+                            'images/cellena-fox.jpg',
+                            height: 100,
+                            width: 100,
+                          ),
                         ),
                       ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.red[900], size: 12),
-                            Text(
-                              '   (1149)',
-                              style: TextStyle(
-                                color: Colors.grey[400],
-                                fontSize: 13,
-                                decoration: TextDecoration.none,
-                                fontWeight: FontWeight.normal,
-                                fontFamily: 'Calibri'
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Flexible(
-                              child: RichText(
-                                overflow: TextOverflow.ellipsis,
-                                strutStyle: StrutStyle(fontSize: 20.0),
-                                text: TextSpan(
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 17
-                                  ),
-                                  text: 'Eva Andressa'),
-                                  maxLines: 2,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text(
-                              '1m63 - 91-65-98',
-                              style: TextStyle(
-                                color: Colors.grey[400],
-                                fontSize: 10,
-                                decoration: TextDecoration.none,
-                                fontWeight: FontWeight.normal,
-                                fontFamily: 'Calibri'
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
+                      Expanded(
                         child: Row(
                           children: <Widget>[
-                            Text(
-                              '20\$',
-                              style: TextStyle(
-                                color: Colors.red,
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                                decoration: TextDecoration.none,
-                                fontFamily: 'Calibri'
-                              ),
+                          Container(
+                            padding: EdgeInsets.only(
+                              left: 10
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                left: 10
-                              ),
-                              child: Text(
-                                '200\$',
-                                style: TextStyle(
-                                  color: Colors.grey[400],
-                                  fontSize: 15,
-                                  decoration: TextDecoration.lineThrough,
-                                  decorationColor: Colors.grey,
-                                  fontWeight: FontWeight.normal,
-                                  fontFamily: 'Calibri'
+                          child: Column(
+                            children: <Widget>[
+                              Container(
+                                width: 150,
+                                child: Text(
+                                  'Cellena Fox',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none
+                                  ),
+                                  
                                 ),
                               ),
-                            )
+                              Container(
+                                padding: EdgeInsets.only(
+                                  top: 5
+                                ),
+                                width: 150,
+                                child: Text(
+                                  'Gym coach',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.normal,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none
+                                  ),
+                                  textAlign: TextAlign.left,
+                                ),
+                              )
+                            ],
+                          ),
+                        )
                           ],
                         ),
-                      )
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.red[900],
+                          borderRadius: BorderRadius.circular(5)
+                        ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                                'Rent',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Calibri',
+                                  decoration: TextDecoration.none
+                                ),
+                            ),
+                          ),
+                        ),
                     ],
                   ),
                 ),
-                Container(
-                  child: Column(
-                    children: <Widget>[
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(5),
-                        child: Image.asset(
-                                "images/jen-selter.jpg",
-                                width: screenWidth(context, dividedBy: 2.3),
-                                height: 100,
-                                fit: BoxFit.fill,
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.yellow, size: 12),
-                            Icon(Icons.star, color: Colors.red[900], size: 12),
-                            Text(
-                              '   (269)',
-                              style: TextStyle(
-                                color: Colors.grey[400],
-                                fontSize: 13,
-                                decoration: TextDecoration.none,
-                                fontWeight: FontWeight.normal,
-                                fontFamily: 'Calibri'
+                Divider(
+                  color: Colors.white,
+                ),
+                // Information  
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Icon(
+                                Entypo.ruler,
+                                color: Colors.white,
+                                size: 15,
                               ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Flexible(
-                              child: RichText(
-                                overflow: TextOverflow.ellipsis,
-                                strutStyle: StrutStyle(fontSize: 20.0),
-                                text: TextSpan(
+                              Padding(
+                                padding: EdgeInsets.only(
+                                  left: 10
+                                ),
+                                child: Text(
+                                  '1m70',
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 17,
-                                    fontFamily: 'Calibri'
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 15
                                   ),
-                                  text: 'Jen Selter'),
-                                  maxLines: 2,
-                              ),
+                                ),
+                              )
+                            ],
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 5
                             ),
-                          ],
-                        ),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(
+                                  Ionicons.ios_body,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 10
+                                  ),
+                                  child: Text(
+                                    '100-60-105',
+                                    style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 15
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 5
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(
+                                  Entypo.location_pin,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 10
+                                  ),
+                                  child: Text(
+                                    'Hue Ohio',
+                                    style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 15
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 5
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(
+                                  MaterialIcons.rate_review,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 10
+                                  ),
+                                  child: Row(
+                                    children: <Widget>[
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star_half_empty,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                          left: 5
+                                        ),
+                                        child: Text(
+                                          '(4520)',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: 'Calibri',
+                                            decoration: TextDecoration.none,
+                                            fontWeight: FontWeight.normal,
+                                            fontSize: 15
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
                       ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text(
-                              '1m68 - 95-63-99',
-                              style: TextStyle(
-                                color: Colors.grey[400],
-                                fontSize: 10,
-                                decoration: TextDecoration.none,
-                                fontWeight: FontWeight.normal,
-                                fontFamily: 'Calibri'
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: screenWidth(context, dividedBy: 2.3),
+                    ),
+                    Container(
                         child: Row(
                           children: <Widget>[
-                            Text(
-                              '20\$',
-                              style: TextStyle(
-                                color: Colors.red,
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                                decoration: TextDecoration.none,
-                                fontFamily: 'Calibri'
-                              ),
+                            Icon(
+                              Entypo.price_tag,
+                              color: Colors.red[900],
                             ),
                             Padding(
                               padding: EdgeInsets.only(
-                                left: 10
+                                left:5
                               ),
                               child: Text(
-                                '200\$',
+                                '15\$/month',
                                 style: TextStyle(
-                                  color: Colors.grey[400],
-                                  fontSize: 15,
-                                  decoration: TextDecoration.lineThrough,
-                                  decorationColor: Colors.grey,
-                                  fontWeight: FontWeight.normal,
-                                  fontFamily: 'Calibri'
+                                  color: Colors.red[900],
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  fontFamily: 'Calibri',
+                                  decoration: TextDecoration.none,
                                 ),
                               ),
                             )
                           ],
                         ),
                       )
-                    ],
-                  ),
-                ),        
+                  ],
+                ),
               ],
             ),
-          )
+          ),
+          //Items line 5
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.grey[850],
+              borderRadius: BorderRadius.circular(5)
+            ),
+            margin: EdgeInsets.only(
+              left: 8,
+              right: 8,
+              bottom: 10,
+            ),
+            padding: EdgeInsets.only(
+              left: 12,
+              top: 15,
+              right: 12,
+              bottom: 15
+            ),
+            
+            child: Column(
+              children: <Widget>[
+                //Image & Rent
+                Container(
+                  padding: EdgeInsets.only(
+                    bottom: 5
+                  ),
+                  child: Row(
+                    children: <Widget>[
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(50))
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(50),
+                          child: Image.asset(
+                            'images/the-rock.png',
+                            height: 100,
+                            width: 100,
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Row(
+                          children: <Widget>[
+                          Container(
+                            padding: EdgeInsets.only(
+                              left: 10
+                            ),
+                          child: Column(
+                            children: <Widget>[
+                              Container(
+                                width: 150,
+                                child: Text(
+                                  'The Rock',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none
+                                  ),
+                                  
+                                ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(
+                                  top: 5
+                                ),
+                                width: 150,
+                                child: Text(
+                                  'Gym coach',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.normal,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none
+                                  ),
+                                  textAlign: TextAlign.left,
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                          ],
+                        ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.red[900],
+                          borderRadius: BorderRadius.circular(5)
+                        ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                                'Rent',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Calibri',
+                                  decoration: TextDecoration.none
+                                ),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+                Divider(
+                  color: Colors.white,
+                ),
+                // Information  
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Icon(
+                                Entypo.ruler,
+                                color: Colors.white,
+                                size: 15,
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(
+                                  left: 10
+                                ),
+                                child: Text(
+                                  '1m95',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 15
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 5
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(
+                                  MaterialCommunityIcons.weight_kilogram,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 10
+                                  ),
+                                  child: Text(
+                                    '118 Kg',
+                                    style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 15
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 5
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(
+                                  Entypo.location_pin,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 10
+                                  ),
+                                  child: Text(
+                                    'Califonia',
+                                    style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 15
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 5
+                            ),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(
+                                  MaterialIcons.rate_review,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 10
+                                  ),
+                                  child: Row(
+                                    children: <Widget>[
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow, 
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Icon(
+                                        FontAwesome.star,
+                                        color: Colors.yellow,
+                                        size: 13,
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                          left: 5
+                                        ),
+                                        child: Text(
+                                          '(9588)',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: 'Calibri',
+                                            decoration: TextDecoration.none,
+                                            fontWeight: FontWeight.normal,
+                                            fontSize: 15
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                        child: Row(
+                          children: <Widget>[
+                            Icon(
+                              Entypo.price_tag,
+                              color: Colors.red[900],
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(
+                                left:5
+                              ),
+                              child: Text(
+                                '25\$/month',
+                                style: TextStyle(
+                                  color: Colors.red[900],
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  fontFamily: 'Calibri',
+                                  decoration: TextDecoration.none,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      )
+                  ],
+                ),
+              ],
+            ),
+          ),
+          
         ],
       ),
         ],

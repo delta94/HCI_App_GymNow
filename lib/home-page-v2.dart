@@ -13,6 +13,64 @@ class HomePageV2 extends StatefulWidget {
   @override
   _HomePageV2State createState() => _HomePageV2State();
 }
+
+showAlertDialog(BuildContext context) {
+
+  // set up the buttons
+  Widget yesButton = FlatButton(
+    child: Text("Yes"),
+    color: Colors.red[900],
+    onPressed:  () {
+      Navigator.of(context, rootNavigator: true).pop()
+      ;
+    },
+  );
+  Widget noButton = FlatButton(
+    child: Text("No"),
+    color: Colors.grey[800],
+    onPressed:  () {
+      Navigator.of(context, rootNavigator: true).pop();
+    },
+  );
+  Widget okButton = FlatButton(
+    child: Text("Ok"),
+    color: Colors.red[900],
+    onPressed:  () {
+      Navigator.of(context, rootNavigator: true).pop();
+    },
+  );
+
+  // set up the AlertDialog
+  AlertDialog alert = AlertDialog(
+    title: Text("Cofirmation"),
+    content: Text("Do you really want to rent this coach?"),
+    backgroundColor: Colors.grey[900],
+    shape:
+          RoundedRectangleBorder(borderRadius: new BorderRadius.circular(15)),
+    titleTextStyle: TextStyle(
+      color: Colors.white,
+      fontWeight: FontWeight.bold,
+      fontSize: 20
+    ),
+    contentTextStyle: TextStyle(
+      color: Colors.white
+    ), 
+    actions: [
+      yesButton,
+      noButton
+    ],
+  );
+
+  // show the dialog
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return alert;
+    },
+  );
+}
+
+
 Size screenSize(BuildContext context) {
   return MediaQuery.of(context).size;
 }
@@ -523,23 +581,28 @@ class _HomePageV2State extends State<HomePageV2> {
                                       ],
                                     ),
                                   ),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.red[900],
-                                      borderRadius: BorderRadius.circular(5)
-                                    ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text(
-                                            'Rent',
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.bold
-                                            ),
+                                  new GestureDetector(
+                                    onTap: () {
+                                      showAlertDialog(context);
+                                    },
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: Colors.red[900],
+                                        borderRadius: BorderRadius.circular(5)
+                                      ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text(
+                                              'Rent',
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.bold
+                                              ),
+                                          ),
                                         ),
                                       ),
-                                    ),
+                                  ),
                                 ],
                               ),
                             ),
@@ -801,23 +864,28 @@ class _HomePageV2State extends State<HomePageV2> {
                                       ],
                                     ),
                                   ),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.red[900],
-                                      borderRadius: BorderRadius.circular(5)
-                                    ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text(
-                                            'Rent',
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.bold
-                                            ),
+                                  new GestureDetector(
+                                    onTap: () {
+                                      showAlertDialog(context);
+                                    },
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: Colors.red[900],
+                                        borderRadius: BorderRadius.circular(5)
+                                      ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text(
+                                              'Rent',
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.bold
+                                              ),
+                                          ),
                                         ),
                                       ),
-                                    ),
+                                  ),
                                 ],
                               ),
                             ),
@@ -1072,23 +1140,28 @@ class _HomePageV2State extends State<HomePageV2> {
                                     ],
                                   ),
                                 ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.red[900],
-                                    borderRadius: BorderRadius.circular(5)
-                                  ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Text(
-                                          'Rent',
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold
-                                          ),
+                                new GestureDetector(
+                                  onTap: () {
+                                      showAlertDialog(context);
+                                    },
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.red[900],
+                                      borderRadius: BorderRadius.circular(5)
+                                    ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                            'Rent',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.bold
+                                            ),
+                                        ),
                                       ),
                                     ),
-                                  ),
+                                ),
                               ],
                             ),
                           ),
@@ -1342,23 +1415,28 @@ class _HomePageV2State extends State<HomePageV2> {
                                     ],
                                   ),
                                 ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.red[900],
-                                    borderRadius: BorderRadius.circular(5)
-                                  ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Text(
-                                          'Rent',
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold
-                                          ),
+                                new GestureDetector(
+                                  onTap: () {
+                                      showAlertDialog(context);
+                                    },
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.red[900],
+                                      borderRadius: BorderRadius.circular(5)
+                                    ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                            'Rent',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.bold
+                                            ),
+                                        ),
                                       ),
                                     ),
-                                  ),
+                                ),
                               ],
                             ),
                           ),
