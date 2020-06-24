@@ -3,7 +3,8 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:gym_app/home-page-v2.dart';
 import 'package:gym_app/homepage.dart';
 import 'package:gym_app/mepage.dart';
-
+import 'training-page.dart';
+import 'testPageView.dart';
 void main() {
   runApp(MyApp());
 }
@@ -26,7 +27,7 @@ final Colors mainColor = Colors.cyan[900] as Colors;
 class GymAppState extends State {
   final List<Widget> listWidget = [
     HomePageV2(),
-    HomePage(),
+    TestApp(),
     Container(),
     MePage(),
 
