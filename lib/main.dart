@@ -3,6 +3,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:gym_app/home-page-v2.dart';
 import 'package:gym_app/homepage.dart';
 import 'package:gym_app/mepage.dart';
+import 'package:gym_app/payment_screen.dart';
 import 'training-page.dart';
 import 'testPageView.dart';
 void main() {
@@ -28,7 +29,7 @@ class GymAppState extends State {
   final List<Widget> listWidget = [
     HomePageV2(),
     TestApp(),
-    Container(),
+    PaymentScreen(),
     MePage(),
 
   ];
@@ -51,6 +52,8 @@ class GymAppState extends State {
         bottomNavigationBar: BottomNavigationBar(
             currentIndex: _currentIndex,
             onTap: indexLast,
+            showUnselectedLabels: true,
+            unselectedItemColor: Colors.black,
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),

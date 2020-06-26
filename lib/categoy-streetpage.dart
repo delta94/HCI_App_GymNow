@@ -70,6 +70,7 @@ class StreetCategoryPage extends StatelessWidget {
         color: Colors.black
       ),
       child: ListView(
+        padding: EdgeInsets.zero,
         children: <Widget>[
           Column(
         children: <Widget>[

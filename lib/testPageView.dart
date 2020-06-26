@@ -50,22 +50,16 @@ class _TestState extends State<TestApp> {
             height: 20,
           ),
           Container(
-            margin: EdgeInsets.symmetric(vertical: 10),
+            padding: EdgeInsets.only(
+              left: 20,
+            ),
             child: Row(
               children: <Widget>[
-                new GestureDetector(
-                  onTap: () => {Navigator.pop(context)},
-                  child: Icon(
-                  Icons.arrow_back,
-                  color: Colors.white,
-                ),
-                ),
-                
                 Text(
                   "Training",
                   style: TextStyle(
                       fontWeight: FontWeight.normal,
-                      fontSize: 20,
+                      fontSize: 30,
                       color: Colors.white),
                 )
               ],
@@ -85,17 +79,17 @@ class _TestState extends State<TestApp> {
                 },
               ),
               Container(
-                margin: EdgeInsets.only(top: 120),
+                margin: EdgeInsets.only(top: 185),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: getListWidget(listTraingSlide, (index) {
                     return AnimatedContainer(
                       duration: Duration(milliseconds: 150),
-                      width: currentIndex == index ? 50 : 25,
-                      height: 15,
+                      width: currentIndex == index ? 25 : 10,
+                      height: 10,
                       margin: EdgeInsets.only(left: 5),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(50),
                         color:  currentIndex == index ? Colors.red[900] : Colors.grey[850]
                       ),
                     );

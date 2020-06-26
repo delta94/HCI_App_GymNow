@@ -13,7 +13,6 @@ class TrainingPage extends StatefulWidget {
 
 }
 
-
 class _TrainingPageState extends State<TrainingPage> {
 
   List<T> map<T>(List list, Function handler) {
