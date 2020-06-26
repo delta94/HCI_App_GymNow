@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:gym_app/profile-marcfitt-page.dart';
+import 'package:gym_app/profile-paige-page.dart';
 
 class Coach{
+  bool isHot;
+  Widget widget;
   String imgUrl;
   String name;
   String type;
@@ -14,6 +18,8 @@ class Coach{
   String price;
 
   Coach({
+    @required this.isHot, 
+    @required this.widget,
     @required this.imgUrl, 
     @required this.name,
     @required this.type,
@@ -29,6 +35,8 @@ class Coach{
 
 final listCoach = [
   Coach(
+    isHot: true,
+    widget: MarcProfilePage(),
     imgUrl: 'images/marc-fitt.jpg',
     name: 'Marc Fitt',
     type: 'Gym coach',
@@ -47,6 +55,8 @@ final listCoach = [
     price: '25\$/month',
   ),
   Coach(
+    isHot: true,
+    widget: PaigeProfilePage(),
     imgUrl: 'images/paige-hathaway.jpg',
     name: 'Paige Hathaway',
     type: 'Gym coach',
@@ -65,6 +75,49 @@ final listCoach = [
     price: '15\$/month',
   ),
   Coach(
+    isHot: false,
+    widget: MarcProfilePage(),
+    imgUrl: 'images/street-udemy.jpg',
+    name: 'Street Udemy',
+    type: 'Workout coach',
+    height: '1m80',
+    iconDetail: MaterialCommunityIcons.weight_kilogram,
+    detail: '93kg',
+    location: 'London',
+    rating: '(2448)',
+    star: [
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star,
+    ],
+    price: '20\$/month',
+  ),
+
+  Coach(
+    isHot: false,
+    widget: MarcProfilePage(),
+    imgUrl: 'images/yoga-hnh.jpg',
+    name: 'Ho Ngoc Ha',
+    type: 'Aerobic coach',
+    height: '1m68',
+    iconDetail: Ionicons.ios_body,
+    detail: '92-60-96',
+    location: 'Ho Chi Minh',
+    rating: '(2979)',
+    star: [
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star_half_empty,
+    ],
+    price: '23\$/month',
+  ),
+  Coach(
+    isHot: true,
+    widget: MarcProfilePage(),
     imgUrl: 'images/sergi-constance.jpg',
     name: 'Sergi Constance',
     type: 'Gym coach',
@@ -83,6 +136,48 @@ final listCoach = [
     price: '20\$/month',
   ),
   Coach(
+    isHot: false,
+    widget: MarcProfilePage(),
+    imgUrl: 'images/lazar-angelov.jpg',
+    name: 'Lazar Angelov',
+    type: 'Workout coach',
+    height: '1m80',
+    iconDetail: MaterialCommunityIcons.weight_kilogram,
+    detail: '93kg',
+    location: 'Bolsa',
+    rating: '(7448)',
+    star: [
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star,
+    ],
+    price: '20\$/month',
+  ),
+  Coach(
+    isHot: false,
+    widget: MarcProfilePage(),
+    imgUrl: 'images/eva_andressa.jpg',
+    name: 'Eva Andressa',
+    type: 'Aerobic coach',
+    height: '1m68',
+    iconDetail: Ionicons.ios_body,
+    detail: '92-60-96',
+    location: 'San Francisco',
+    rating: '(2979)',
+    star: [
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star_half_empty,
+    ],
+    price: '23\$/month',
+  ),
+  Coach(
+    isHot: true,
+    widget: MarcProfilePage(),
     imgUrl: 'images/Trang.jpg',
     name: 'Trang Le',
     type: 'Yoga coach',
@@ -99,5 +194,85 @@ final listCoach = [
       FontAwesome.star_half_empty,
     ],
     price: '10\$/month',
+  ),
+  Coach(
+    isHot: false,
+    widget: MarcProfilePage(),
+    imgUrl: 'images/cellena-fox.jpg',
+    name: 'Cellena Fox',
+    type: 'Yoga coach',
+    height: '1m70',
+    iconDetail: Ionicons.ios_body,
+    detail: '102-60-105',
+    location: 'Las Vegas',
+    rating: '(4979)',
+    star: [
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star_half_empty,
+    ],
+    price: '18\$/month',
+  ),
+  Coach(
+    isHot: false,
+    widget: MarcProfilePage(),
+    imgUrl: 'images/aerobic-tw.jpg',
+    name: 'Taylor Swift',
+    type: 'Aerobic coach',
+    height: '1m68',
+    iconDetail: Ionicons.ios_body,
+    detail: '92-60-96',
+    location: 'Hollywood',
+    rating: '(9979)',
+    star: [
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star_half_empty,
+    ],
+    price: '29\$/month',
+  ),
+  Coach(
+    isHot: false,
+    widget: MarcProfilePage(),
+    imgUrl: 'images/gym-thor.jpeg',
+    name: 'Thor',
+    type: 'Workout coach',
+    height: '1m80',
+    iconDetail: MaterialCommunityIcons.weight_kilogram,
+    detail: '93kg',
+    location: 'Avenger',
+    rating: '(4448)',
+    star: [
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star,
+    ],
+    price: '20\$/month',
+  ),
+  Coach(
+    isHot: false,
+    widget: MarcProfilePage(),
+    imgUrl: 'images/jen-selter.jpg',
+    name: 'Jen Selter',
+    type: 'Yoga coach',
+    height: '1m70',
+    iconDetail: Ionicons.ios_body,
+    detail: '92-60-96',
+    location: 'Las Vegas',
+    rating: '(4979)',
+    star: [
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star,
+      FontAwesome.star_half_empty,
+    ],
+    price: '19\$/month',
   ),
 ];

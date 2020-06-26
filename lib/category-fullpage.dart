@@ -58,7 +58,7 @@ showAlertDialog(BuildContext context) {
     },
   );
 }
-class YogaCategoryPage extends StatelessWidget {
+class FullCategoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -94,7 +94,7 @@ class YogaCategoryPage extends StatelessWidget {
               ),
               Container(
                 child: Text(
-                  'Yoga',
+                  'Full Coach',
                   style: TextStyle(
                     decoration: TextDecoration.none,
                     fontFamily: 'Calibri',
@@ -185,7 +185,6 @@ class YogaCategoryPage extends StatelessWidget {
           ),
           //Items Line 1
           for(var coach in listCoach)
-            if(coach.type == 'Yoga coach')
               new GestureDetector(
                 onTap: () {
                   Navigator.push(
@@ -280,8 +279,8 @@ class YogaCategoryPage extends StatelessWidget {
                             ),
                             new GestureDetector(
                               onTap: () {
-                                showAlertDialog(context);
-                              },
+                                        showAlertDialog(context);
+                                      },
                               child: Container(
                                 decoration: BoxDecoration(
                                   color: Colors.red[900],

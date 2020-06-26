@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:gym_app/category-fullpage.dart';
 import 'package:gym_app/models/category.dart';
 import 'package:gym_app/models/coach.dart';
 import 'package:gym_app/profile-marcfitt-page.dart';
@@ -343,17 +344,25 @@ class _HomePageV2State extends State<HomePageV2> {
                           ),
                         ),
                         Expanded(
-                          child: Container(
-                            padding: EdgeInsets.only(
-                              right: 20
-                            ),
-                            child: Text(
-                              'See full coach',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontStyle: FontStyle.italic
+                          child: new GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => FullCategoryPage()),
+                              );
+                            },
+                            child: Container(
+                              padding: EdgeInsets.only(
+                                right: 20
                               ),
-                              textAlign: TextAlign.end,
+                              child: Text(
+                                'See full coach',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontStyle: FontStyle.italic
+                                ),
+                                textAlign: TextAlign.end,
+                              ),
                             ),
                           ),
                         )
@@ -361,11 +370,12 @@ class _HomePageV2State extends State<HomePageV2> {
                     ),
                     //Item 
                     for(var coach in listCoach)
+                      if(coach.isHot == true)
                       new GestureDetector(
                       onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => MarcProfilePage()),
+                                MaterialPageRoute(builder: (context) => coach.widget),
                               );
                       },
                       child: Container(
@@ -627,11 +637,13 @@ class _HomePageV2State extends State<HomePageV2> {
                     Text(
                       'You reach the bottom.',
                       style: TextStyle(
-                        color: Colors.white
+                        color: Colors.white,
+                        fontStyle: FontStyle.italic,
+                        fontSize: 9
                       ),
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 5,
                     )
                   ],
                 ),
