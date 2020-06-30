@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gym_app/category-aerobicpage.dart';
 import 'package:gym_app/models/training-slide.dart';
-
+import 'package:smooth_star_rating/smooth_star_rating.dart';
+import 'package:nice_button/nice_button.dart';
 class TrainingItem extends StatefulWidget {
   int index;
   TrainingItem(this.index);
@@ -137,6 +138,57 @@ class _TrainingItemState extends State<TrainingItem> {
                             fontSize: 20
                           ),
                         )
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 20,
+                      bottom: 20
+                    ),
+                    child: SmoothStarRating(
+                          allowHalfRating: false,
+                          onRated: (v) {
+                          },
+                          starCount: 5,
+                          
+                          size: 40.0,
+                          isReadOnly:false,
+                          color: Colors.yellow,
+                          borderColor: Colors.yellow,
+                          spacing:0.0
+                    )
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Card(
+                      color: Colors.grey,
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: TextField(
+                          maxLines: 8,
+                          decoration: InputDecoration.collapsed(hintText: "Enter your text here"),
+                        ),
+                      )
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        NiceButton(
+                          width: 150,
+                          background: Colors.red[900],
+                          radius: 40,
+                          padding: const EdgeInsets.all(10),
+                          text: "Submit",
+                          elevation: 20,
+                          fontSize: 15,
+                          onPressed: () {},
+                        ),
                       ],
                     ),
                   )
