@@ -6,6 +6,7 @@ import 'package:gym_app/mepage.dart';
 import 'package:gym_app/payment_screen.dart';
 import 'training-page.dart';
 import 'testPageView.dart';
+import 'exercise-detail.dart';
 void main() {
   runApp(MyApp());
 }
@@ -28,7 +29,7 @@ final Colors mainColor = Colors.cyan[900] as Colors;
 class GymAppState extends State {
   final List<Widget> listWidget = [
     HomePageV2(),
-    TestApp(),
+    ExerciseDetail(),
     PaymentScreen(),
     MePage(),
 
@@ -48,6 +49,7 @@ class GymAppState extends State {
       title: 'Flutter Demo',
       theme: ThemeData(fontFamily: 'Arial'),
       home: Scaffold(
+        resizeToAvoidBottomPadding: false,
         body: listWidget.elementAt(_currentIndex),
         bottomNavigationBar: BottomNavigationBar(
             currentIndex: _currentIndex,
