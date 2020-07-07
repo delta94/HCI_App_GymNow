@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:gym_app/models/coach.dart';
+
 Size screenSize(BuildContext context) {
     return MediaQuery.of(context).size;
 }
@@ -73,7 +74,7 @@ class AerobicCategoryPage extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: <Widget>[
           Column(
-        children: <Widget>[
+            children: <Widget>[
           // <- Gym
           Row(
             children: <Widget>[

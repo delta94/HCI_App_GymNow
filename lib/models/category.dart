@@ -15,7 +15,7 @@ class Category {
     @required this.icon,
     @required this.widget,
   });
-}
+} 
 
 final listCategory = [
   Category(

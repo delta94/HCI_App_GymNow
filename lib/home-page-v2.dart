@@ -3,14 +3,15 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:gym_app/category-fullpage.dart';
 import 'package:gym_app/models/category.dart';
 import 'package:gym_app/models/coach.dart';
-import 'package:gym_app/profile-marcfitt-page.dart';
-import 'package:gym_app/profile-paige-page.dart';
+import 'package:gym_app/payment_screen.dart';
+import 'package:gym_app/reward-page.dart';
 import 'package:gym_app/searchpage.dart';
 
 class HomePageV2 extends StatefulWidget {
   @override
   _HomePageV2State createState() => _HomePageV2State();
 }
+
 
 showAlertDialog(BuildContext context) {
 
@@ -141,90 +142,106 @@ class _HomePageV2State extends State<HomePageV2> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Container(
-                    padding: EdgeInsets.only(
-                      top:10,
-                      bottom:10
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.black
-                    ),
-                    width: screenWidth(context, dividedBy: 2) - 1,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(50)),
-                            border: Border.all(
-                              color: Colors.blue[700],
-                              width: 2,
+                  new GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => PaymentScreen()),
+                      );
+                    },
+                    child: Container(
+                      padding: EdgeInsets.only(
+                        top:10,
+                        bottom:10
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.black
+                      ),
+                      width: screenWidth(context, dividedBy: 2) - 1,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(50)),
+                              border: Border.all(
+                                color: Colors.blue[700],
+                                width: 2,
+                              ),
+                              color: Colors.blue[900]
                             ),
-                            color: Colors.blue[900]
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(5.0),
-                            child: Icon(
-                              Entypo.wallet,
-                              color: Colors.white,
+                            child: Padding(
+                              padding: const EdgeInsets.all(5.0),
+                              child: Icon(
+                                Entypo.wallet,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
-                        ),
-                        Text(' '),
-                        Text(
-                          '11,000 \$',
-                          style: TextStyle(
-                            color: Colors.white
+                          Text(' '),
+                          Text(
+                            '11,000 \$',
+                            style: TextStyle(
+                              color: Colors.white
+                            ),
                           ),
-                        ),
-                        Icon(
-                          MaterialIcons.navigate_next,
-                          color: Colors.grey,
-                        )
-                      ],
+                          Icon(
+                            MaterialIcons.navigate_next,
+                            color: Colors.grey,
+                          )
+                        ],
+                      ),
                     ),
                   ),
-                  Container(
-                    padding: EdgeInsets.only(
-                      top:10,
-                      bottom:10
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.black
-                    ),
-                    width: screenWidth(context, dividedBy: 2) - 1,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(50)),
-                            border: Border.all(
-                              color: Colors.grey,
-                              width: 2,
+                  new GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => RewardPage()),
+                      );
+                    },
+                    child: Container(
+                      padding: EdgeInsets.only(
+                        top:10,
+                        bottom:10
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.black
+                      ),
+                      width: screenWidth(context, dividedBy: 2) - 1,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(50)),
+                              border: Border.all(
+                                color: Colors.grey,
+                                width: 2,
+                              ),
+                              color: Colors.white
                             ),
-                            color: Colors.white
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(5.0),
-                            child: Icon(
-                              MaterialCommunityIcons.crown,
-                              color: Colors.yellow,
+                            child: Padding(
+                              padding: const EdgeInsets.all(5.0),
+                              child: Icon(
+                                MaterialCommunityIcons.crown,
+                                color: Colors.yellow,
+                              ),
                             ),
                           ),
-                        ),
-                        Text(' '),
-                        Text(
-                          '229 Points',
-                          style: TextStyle(
-                            color: Colors.white
+                          Text(' '),
+                          Text(
+                            '229 Points',
+                            style: TextStyle(
+                              color: Colors.white
+                            ),
                           ),
-                        ),
-                        Icon(
-                          MaterialIcons.navigate_next,
-                          color: Colors.grey,
-                        )
-                      ],
+                          Icon(
+                            MaterialIcons.navigate_next,
+                            color: Colors.grey,
+                          )
+                        ],
+                      ),
                     ),
                   )
                 ],

@@ -126,10 +126,10 @@ class _TrainingItemState extends State<TrainingItem> {
                   ),
                   Padding(
                     padding: EdgeInsets.only(
-                      left: 20,
                       bottom: 10
                     ),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
                           'Rating',
@@ -141,33 +141,37 @@ class _TrainingItemState extends State<TrainingItem> {
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      left: 20,
-                      bottom: 20
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        bottom: 20
+                      ),
+                      child: SmoothStarRating(
+                            allowHalfRating: false,
+                            onRated: (v) {
+                            },
+                            starCount: 5,
+                            
+                            size: 40.0,
+                            isReadOnly:false,
+                            color: Colors.yellow,
+                            borderColor: Colors.yellow,
+                            spacing:0.0
+                      )
                     ),
-                    child: SmoothStarRating(
-                          allowHalfRating: false,
-                          onRated: (v) {
-                          },
-                          starCount: 5,
-                          
-                          size: 40.0,
-                          isReadOnly:false,
-                          color: Colors.yellow,
-                          borderColor: Colors.yellow,
-                          spacing:0.0
-                    )
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.all(20),
+                    padding: const EdgeInsets.only(
+                      left:20,
+                      right:20
+                    ),
                     child: Card(
                       color: Colors.grey,
                       child: Padding(
                         padding: EdgeInsets.all(8.0),
                         child: TextField(
-                          maxLines: 8,
+                          maxLines: 5,
                           decoration: InputDecoration.collapsed(hintText: "Enter your text here"),
                         ),
                       )
@@ -177,7 +181,7 @@ class _TrainingItemState extends State<TrainingItem> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         NiceButton(
                           width: 150,

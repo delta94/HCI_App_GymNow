@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:gym_app/account_page.dart';
 import 'package:gym_app/home-page-v2.dart';
 import 'package:gym_app/homepage.dart';
 import 'package:gym_app/mepage.dart';
@@ -29,9 +30,9 @@ final Colors mainColor = Colors.cyan[900] as Colors;
 class GymAppState extends State {
   final List<Widget> listWidget = [
     HomePageV2(),
-    ExerciseDetail(),
+    TestApp(),
     PaymentScreen(),
-    MePage(),
+    AccountPage(),
 
   ];
 
@@ -55,7 +56,7 @@ class GymAppState extends State {
             currentIndex: _currentIndex,
             onTap: indexLast,
             showUnselectedLabels: true,
-            unselectedItemColor: Colors.black,
+            unselectedItemColor: Colors.grey[850],
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
