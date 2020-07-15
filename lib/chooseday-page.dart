@@ -26,6 +26,17 @@ double screenWidth(BuildContext context, {double dividedBy = 1}) {
 
 class _ChooseDayState extends State<ChooseDay> {
   
+  int total = 0;
+
+  int calculateTotalChosenSlot() {
+    int total = 0;
+    for (var item in listRow) {
+      int count = item.totalChosenSlot();
+      total += count;
+    }
+
+    return total;
+  }
   @override
   Widget build(BuildContext context) {
     return Container(

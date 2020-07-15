@@ -11,12 +11,23 @@ class Slot {
 }
 
 class RowSlot{
-  List listSlotRow;
+  List<Slot> listSlotRow;
   String title;
   RowSlot({
     @required this.listSlotRow,
     @required this.title,
   });
+
+  int totalChosenSlot() {
+    int total = 0;
+    for (var item in listSlotRow) {
+      if(item.isChose) {
+        total++;
+      }
+    }
+
+    return total;
+  }
 }
 final listRow = {
   RowSlot(
