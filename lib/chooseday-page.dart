@@ -115,6 +115,7 @@ class _ChooseDayState extends State<ChooseDay> {
                       onTap: (){
                         setState(() {
                           slot.isChose = !slot.isChose;
+                          total = calculateTotalChosenSlot();
                         });
                       },
                       child:Container(
@@ -125,7 +126,7 @@ class _ChooseDayState extends State<ChooseDay> {
                           color: Colors.green,
                           size: 27,
                         ):Text(
-                          '',
+                          total.toString(),
                           style: TextStyle(
                             fontSize: 22
                           ),
