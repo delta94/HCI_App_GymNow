@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:gym_app/chooseday-page.dart';
 Size screenSize(BuildContext context) {
   return MediaQuery.of(context).size;
 }
@@ -163,25 +164,33 @@ class PaigeProfilePage extends StatelessWidget {
                     ),
                     Column(
                       children: <Widget>[
-                        Container(
-                          decoration: BoxDecoration(
-                                  color: Colors.red[900],
-                                  borderRadius: BorderRadius.circular(5)
-                          ),
-                          padding: EdgeInsets.all(8),
-                          child: Row(
-                            children: <Widget>[
-                              Text(
-                                'Rent',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'Calibri',
-                                  decoration: TextDecoration.none
+                        new GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => ChooseDay()),
+                            );
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                                    color: Colors.red[900],
+                                    borderRadius: BorderRadius.circular(5)
+                            ),
+                            padding: EdgeInsets.all(8),
+                            child: Row(
+                              children: <Widget>[
+                                Text(
+                                  'Deal',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Calibri',
+                                    decoration: TextDecoration.none
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                         SizedBox(

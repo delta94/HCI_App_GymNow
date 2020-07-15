@@ -218,10 +218,6 @@ class _HomePageV2State extends State<HomePageV2> {
                     ),
                     new GestureDetector(
                       onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => SearchPage()),
-                              );
                       },
                       child: Container(
                         decoration: BoxDecoration(
@@ -591,7 +587,7 @@ class _HomePageV2State extends State<HomePageV2> {
                                         child: Padding(
                                           padding: const EdgeInsets.all(8.0),
                                           child: Text(
-                                              'Rent',
+                                              'Deal',
                                               style: TextStyle(
                                                 color: Colors.white,
                                                 fontSize: 15,

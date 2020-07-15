@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:gym_app/models/slot.dart';
+import 'package:gym_app/myvoucher-page.dart';
 
 class ChooseDay extends StatefulWidget {
   @override
@@ -10,6 +11,95 @@ class ChooseDay extends StatefulWidget {
 List listDay = [
   '','MON','TUE','WED','THU','FRI','SAT','SUN'
 ];
+
+showAlertDialog(BuildContext context) {
+
+  // set up the buttons
+  Widget yesButton = FlatButton(
+    child: Text("Yes"),
+    color: Colors.red[900],
+    onPressed:  () async{
+      Navigator.of(context, rootNavigator: true).pop();
+      Navigator.pop(context);
+      await showDialog(
+        context: context,
+        child: new AlertDialog(
+          content: Container(
+            height: 160,
+            child: Column(
+              children: <Widget>[
+                Icon(
+                  FontAwesome.check_circle_o,
+                  color: Colors.green,
+                  size: 100,
+                ),
+                Text(
+                  'Success',
+                  style: TextStyle(
+                    decoration: TextDecoration.none,
+                    fontFamily: 'Calibri',
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green,
+                    fontSize: 30
+                  ),
+                ),
+                Text(
+                  '+ 20 points',
+                  style: TextStyle(
+                    decoration: TextDecoration.none,
+                    fontFamily: 'Calibri',
+                    fontWeight: FontWeight.normal,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.white,
+                    fontSize: 15
+                  ),
+                )
+              ],
+            ),
+          ),
+          backgroundColor: Colors.grey[850],
+        )
+      )
+      ;
+    },
+  );
+  Widget noButton = FlatButton(
+    child: Text("No"),
+    color: Colors.grey[800],
+    onPressed:  () {
+      Navigator.of(context, rootNavigator: true).pop();
+    },
+  );
+
+  // set up the AlertDialog
+  AlertDialog alert = AlertDialog(
+    title: Text("Cofirmation"),
+    content: Text("Do you really want to rent this coach?"),
+    backgroundColor: Colors.grey[900],
+    shape:
+          RoundedRectangleBorder(borderRadius: new BorderRadius.circular(15)),
+    titleTextStyle: TextStyle(
+      color: Colors.white,
+      fontWeight: FontWeight.bold,
+      fontSize: 20
+    ),
+    contentTextStyle: TextStyle(
+      color: Colors.white
+    ), 
+    actions: [
+      yesButton,
+      noButton
+    ],
+  );
+
+  // show the dialog
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return alert;
+    },
+  );
+}
 
 Size screenSize(BuildContext context) {
   return MediaQuery.of(context).size;
@@ -147,6 +237,20 @@ class _ChooseDayState extends State<ChooseDay> {
               ],
             ),
           ),
+          Row(
+            children: <Widget>[
+              Text(
+                'How many month do you want to rent?',
+                style: TextStyle(
+                  decoration: TextDecoration.none,
+                  fontFamily: 'Calibri',
+                  fontWeight: FontWeight.normal,
+                  color: Colors.white,
+                  fontSize: 20
+                ),
+              ),
+            ],
+          ),
           Table(
             border: TableBorder.all(
               color: Colors.white
@@ -214,7 +318,7 @@ class _ChooseDayState extends State<ChooseDay> {
                           color: Colors.green,
                           size: 27,
                         ):Text(
-                          total.toString(),
+                          '',
                           style: TextStyle(
                             fontSize: 22
                           ),
@@ -242,7 +346,7 @@ class _ChooseDayState extends State<ChooseDay> {
                 ),
               ),
               Text(
-                '5',
+                total.toString(),
                 style: TextStyle(
                   decoration: TextDecoration.none,
                   fontFamily: 'Calibri',
@@ -292,7 +396,7 @@ class _ChooseDayState extends State<ChooseDay> {
                 ),
               ),
               Text(
-                '125\$',
+                (total*25).toString() + '\$',
                 style: TextStyle(
                   decoration: TextDecoration.none,
                   fontFamily: 'Calibri',
@@ -306,37 +410,88 @@ class _ChooseDayState extends State<ChooseDay> {
           SizedBox(
             height: 10
           ),
-          Container(
-            color: Colors.red[900],
-            padding: EdgeInsets.all(10),
-            child: Text(
-              'RENT',
-              style: TextStyle(
-                decoration: TextDecoration.none,
-                fontFamily: 'Calibri',
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-                fontSize: 25
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Text(
+                'Do you have any voucher?',
+                style: TextStyle(
+                  decoration: TextDecoration.none,
+                  fontFamily: 'Calibri',
+                  fontWeight: FontWeight.normal,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.white,
+                  fontSize: 20
+                ),
               ),
-              textAlign: TextAlign.center,
+              new GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MyVoucher()),
+                  );
+                },
+                child: Container(
+                color: Colors.red[900],
+                padding: EdgeInsets.all(10),
+                child: Text(
+                  'Use voucher',
+                  style: TextStyle(
+                    decoration: TextDecoration.none,
+                    fontFamily: 'Calibri',
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 15
+                  ),
+                ),
+            ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 10
+          ),
+          new GestureDetector(
+            onTap: (){
+              showAlertDialog(context);
+            },
+            child: Container(
+              color: Colors.red[900],
+              padding: EdgeInsets.all(10),
+              child: Text(
+                'RENT',
+                style: TextStyle(
+                  decoration: TextDecoration.none,
+                  fontFamily: 'Calibri',
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontSize: 25
+                ),
+                textAlign: TextAlign.center,
+              ),
             ),
           ),
           SizedBox(
             height: 5
           ),
-          Container(
-            color: Colors.black,
-            padding: EdgeInsets.all(10),
-            child: Text(
-              'CANCLE',
-              style: TextStyle(
-                decoration: TextDecoration.none,
-                fontFamily: 'Calibri',
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-                fontSize: 25
+          new GestureDetector(
+            onTap: (){
+              Navigator.pop(context);
+            },
+            child: Container(
+              color: Colors.black,
+              padding: EdgeInsets.all(10),
+              child: Text(
+                'CANCEL',
+                style: TextStyle(
+                  decoration: TextDecoration.none,
+                  fontFamily: 'Calibri',
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontSize: 25
+                ),
+                textAlign: TextAlign.center,
               ),
-              textAlign: TextAlign.center,
             ),
           )
         ],

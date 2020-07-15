@@ -32,27 +32,27 @@ class RowSlot{
 final listRow = {
   RowSlot(
     listSlotRow: listSlot,
-    title: '7:00-\n8:30'
+    title: '7:00\n8:30'
   ),
   RowSlot(
     listSlotRow: listSlot2,
-    title: '8:45-\n10:15'
+    title: '8:45\n10:15'
   ),
   RowSlot(
     listSlotRow: listSlot3,
-    title: '10:30-\n12:00'
+    title: '10:30\n12:00'
   ),
   RowSlot(
     listSlotRow: listSlot4,
-    title: '12:30-\n14:00'
+    title: '12:30\n14:00'
   ),
   RowSlot(
     listSlotRow: listSlot5,
-    title: '14:15-\n15:45'
+    title: '14:15\n15:45'
   ),
   RowSlot(
     listSlotRow: listSlot6,
-    title: '16:00-\n17:30'
+    title: '16:00\n17:30'
   ),
 };
 final listSlot = [

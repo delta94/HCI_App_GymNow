@@ -79,7 +79,7 @@ class _TestState extends State<TestApp> {
                 },
               ),
               Container(
-                margin: EdgeInsets.only(top: 185),
+                margin: EdgeInsets.only(top: 230),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: getListWidget(listTraingSlide, (index) {
