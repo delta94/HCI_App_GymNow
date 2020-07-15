@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gym_app/category-aerobicpage.dart';
+import 'package:gym_app/exercise-list.dart';
 import 'package:gym_app/models/training-slide.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 import 'package:nice_button/nice_button.dart';
@@ -76,51 +77,59 @@ class _TrainingItemState extends State<TrainingItem> {
                 for (var item in listTraingSlide[index].listSubItem)
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Container(
-                      padding: EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.red[900]),
-                      width: screenWidth(context),
-                      height: 80,
-                      margin: EdgeInsets.only(bottom: 8),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Padding(
-                            padding: EdgeInsets.only(
-                              left: 10
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: <Widget>[
-                                Container(
-                                  width: screenWidth(context) - 70,
-                                  child: Text(
-                                    item.title,
-                                    style: TextStyle(
-                                        fontSize: 20, 
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white
-                                        ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Container(
-                                  width: screenWidth(context) - 70,
-                                  child: Text(
-                                    item.excercise,
-                                    style: TextStyle(
-                                      color: Colors.white
+                    child: new GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ExerciseList()),
+                        );
+                      },
+                      child: Container(
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.red[900]),
+                        width: screenWidth(context),
+                        height: 80,
+                        margin: EdgeInsets.only(bottom: 8),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Padding(
+                              padding: EdgeInsets.only(
+                                left: 10
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: <Widget>[
+                                  Container(
+                                    width: screenWidth(context) - 70,
+                                    child: Text(
+                                      item.title,
+                                      style: TextStyle(
+                                          fontSize: 20, 
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white
+                                          ),
                                     ),
                                   ),
-                                )
-                              ],
-                            ),
-                          )
-                        ],
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Container(
+                                    width: screenWidth(context) - 70,
+                                    child: Text(
+                                      item.excercise,
+                                      style: TextStyle(
+                                        color: Colors.white
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ),

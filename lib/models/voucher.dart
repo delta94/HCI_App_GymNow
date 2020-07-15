@@ -49,4 +49,25 @@ final listVoucher = [
     owner: 'Gym Now', 
     point: '350'
   ),
+
+  Voucher(
+    imgUrl: 'images/Voucher2.jpg', 
+    title: 'Free voucher 10\$ for Yoga', 
+    owner: 'Gym Now', 
+    point: '350'
+  ),
+
+  Voucher(
+    imgUrl: 'images/Voucher2.jpg', 
+    title: 'Free voucher 10\$ for Workout', 
+    owner: 'Gym Now', 
+    point: '350'
+  ),
+
+  Voucher(
+    imgUrl: 'images/Voucher2.jpg', 
+    title: 'Free voucher 10\$ for Aerobic', 
+    owner: 'Gym Now', 
+    point: '350'
+  ),
 ];
