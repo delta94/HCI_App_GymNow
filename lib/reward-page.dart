@@ -14,6 +14,94 @@ double screenWidth(BuildContext context, {double dividedBy = 1}) {
   return screenSize(context).width / dividedBy;
 }
 
+showAlertDialog(BuildContext context) {
+
+  // set up the buttons
+  Widget yesButton = FlatButton(
+    child: Text("Yes"),
+    color: Colors.red[900],
+    onPressed:  () async{
+      Navigator.of(context, rootNavigator: true).pop();
+      await showDialog(
+        context: context,
+        child: new AlertDialog(
+          content: Container(
+            height: 160,
+            child: Column(
+              children: <Widget>[
+                Icon(
+                  FontAwesome.check_circle_o,
+                  color: Colors.green,
+                  size: 100,
+                ),
+                Text(
+                  'Success',
+                  style: TextStyle(
+                    decoration: TextDecoration.none,
+                    fontFamily: 'Calibri',
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green,
+                    fontSize: 30
+                  ),
+                ),
+                Text(
+                  '- 200 points',
+                  style: TextStyle(
+                    decoration: TextDecoration.none,
+                    fontFamily: 'Calibri',
+                    fontWeight: FontWeight.normal,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.white,
+                    fontSize: 15
+                  ),
+                )
+              ],
+            ),
+          ),
+          backgroundColor: Colors.grey[850],
+        )
+      )
+      ;
+    },
+  );
+  Widget noButton = FlatButton(
+    child: Text("No"),
+    color: Colors.grey[800],
+    onPressed:  () {
+      Navigator.of(context, rootNavigator: true).pop();
+    },
+  );
+
+  // set up the AlertDialog
+  AlertDialog alert = AlertDialog(
+    title: Text("Cofirmation"),
+    content: Text("Are you sure?"),
+    backgroundColor: Colors.grey[900],
+    shape:
+          RoundedRectangleBorder(borderRadius: new BorderRadius.circular(15)),
+    titleTextStyle: TextStyle(
+      color: Colors.white,
+      fontWeight: FontWeight.bold,
+      fontSize: 20
+    ),
+    contentTextStyle: TextStyle(
+      color: Colors.white
+    ), 
+    actions: [
+      yesButton,
+      noButton
+    ],
+  );
+
+  // show the dialog
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return alert;
+    },
+  );
+}
+
 class RewardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -220,17 +308,22 @@ class RewardPage extends StatelessWidget {
                                                 fontSize: 13
                                               ),
                                             ),
-                                            Container(
-                                              padding: EdgeInsets.all(8),
-                                              color: Colors.red[900],
-                                              child: Text(
-                                                'Redeem',
-                                                style: TextStyle(
-                                                  decoration: TextDecoration.none,
-                                                  fontFamily: 'Calibri',
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Colors.white,
-                                                  fontSize: 13
+                                            new GestureDetector(
+                                              onTap: () {
+                                                showAlertDialog(context);
+                                              },
+                                              child: Container(
+                                                padding: EdgeInsets.all(8),
+                                                color: Colors.red[900],
+                                                child: Text(
+                                                  'Redeem',
+                                                  style: TextStyle(
+                                                    decoration: TextDecoration.none,
+                                                    fontFamily: 'Calibri',
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.white,
+                                                    fontSize: 13
+                                                  ),
                                                 ),
                                               ),
                                             )

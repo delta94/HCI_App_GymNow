@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:gym_app/myvoucher-page.dart';
 import 'package:gym_app/reward-page.dart';
 import 'package:gym_app/wallet_activity_screen.dart';
 
@@ -160,7 +161,7 @@ class PaymentScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => RewardPage()),
+                        MaterialPageRoute(builder: (context) => MyVoucher()),
                       );
                     },
                     child: Container(
@@ -191,7 +192,7 @@ class PaymentScreen extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            "Rewards",
+                            "My voucher",
                             style: TextStyle(
                                 decoration: TextDecoration.none,
                                 fontFamily: 'Calibri',

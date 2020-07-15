@@ -11,7 +11,61 @@ class ExerciseDetail extends StatefulWidget {
  
 }
 
+
+showAlertDialog(BuildContext context) {
+
+  // set up the buttons
+  Widget yesButton = FlatButton(
+    child: Text("Yes"),
+    color: Colors.red[900],
+    onPressed:  () {
+      // isFinished = true;
+      Navigator.of(context, rootNavigator: true).pop()
+      ;
+    },
+  );
+  Widget noButton = FlatButton(
+    child: Text("No"),
+    color: Colors.grey[800],
+    onPressed:  () {
+      
+      
+      Navigator.of(context, rootNavigator: true).pop();
+    },
+  );
+
+  // set up the AlertDialog
+  AlertDialog alert = AlertDialog(
+    title: Text("Cofirmation"),
+    content: Text("Do you really want to end this course?"),
+    backgroundColor: Colors.grey[900],
+    shape:
+          RoundedRectangleBorder(borderRadius: new BorderRadius.circular(15)),
+    titleTextStyle: TextStyle(
+      color: Colors.white,
+      fontWeight: FontWeight.bold,
+      fontSize: 20
+    ),
+    contentTextStyle: TextStyle(
+      color: Colors.white
+    ), 
+    actions: [
+      yesButton,
+      noButton
+    ],
+  );
+
+  // show the dialog
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return alert;
+    },
+  );
+}
+
 class _ExerciseDetailState extends State<ExerciseDetail> {
+  bool isFinished = false;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,7 +73,9 @@ class _ExerciseDetailState extends State<ExerciseDetail> {
       decoration: BoxDecoration(
         color: Colors.black
       ),
-      child: Column(
+      child: ListView(
+        children: <Widget>[
+          Column(
         children: <Widget>[
           Stack(
             children: <Widget>[
@@ -164,10 +220,64 @@ class _ExerciseDetailState extends State<ExerciseDetail> {
                 )
               ],
             ),
-          )
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              new GestureDetector(
+                onTap: (){
+                    setState(() {
+                      isFinished = !isFinished;
+                    });
+                },
+                child:isFinished? Container(
+                  decoration: BoxDecoration(
+                    color: Colors.grey[850],
+                    borderRadius: BorderRadius.circular(10)
+                  ),
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    'Finished',
+                    style: TextStyle(
+                      decoration: TextDecoration.none,
+                      fontFamily: 'Calibri',
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 30
+                    ),
+                  ),
+                ):Container(
+                  decoration: BoxDecoration(
+                    color: Colors.red[900],
+                    borderRadius: BorderRadius.circular(10)
+                  ),
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    'Finish',
+                    style: TextStyle(
+                      decoration: TextDecoration.none,
+                      fontFamily: 'Calibri',
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 30
+                    ),
+                  ),
+                )
+              )
+            ],
+          ),
+          SizedBox(
+            height: 10,
+          ),
 
         ],
       ),
+        ],
+      ) 
+      
     );
   }
 

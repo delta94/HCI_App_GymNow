@@ -493,7 +493,10 @@ class _ChooseDayState extends State<ChooseDay> {
                 textAlign: TextAlign.center,
               ),
             ),
-          )
+          ),
+          SizedBox(
+            height: 5
+          ),
         ],
       )
     );

@@ -187,7 +187,34 @@ class _TrainingItemState extends State<TrainingItem> {
                           MaterialPageRoute(builder: (context) => ExerciseList()),
                         );
                       },
-                      child: Container(
+                      child: item.isFinish? 
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.red[900]),
+                        width: screenWidth(context),
+                        height: 80,
+                        margin: EdgeInsets.only(bottom: 8),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: <Widget>[
+                                Icon(
+                                  MaterialCommunityIcons.clipboard_check_outline,
+                                  color: Colors.white,
+                                  size: 60,
+                                ),
+                                Text(
+                                  'Finished',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 30
+                                  ),
+                                )
+                          ],
+                        ),
+                      ):Container(
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
@@ -233,7 +260,7 @@ class _TrainingItemState extends State<TrainingItem> {
                             )
                           ],
                         ),
-                      ),
+                      )
                     ),
                   ),
                   Padding(

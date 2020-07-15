@@ -15,9 +15,11 @@ class TrainingSlide {
 class TrainingSubItem {
   String title;
   String excercise;
+  bool isFinish;
   TrainingSubItem({
     @required this.title,
-    @required this.excercise
+    @required this.excercise,
+    @required this.isFinish
   });
 }
 
@@ -28,152 +30,182 @@ final listTraingSlide = [
     listSubItem: [
       TrainingSubItem(
         title: "Day 1", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: true
       ),
 
       TrainingSubItem(
         title: "Day 2", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: true
       ),
 
       TrainingSubItem(
         title: "Day 3", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 4", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 5", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 6", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 7", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 8", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 9", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 10", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 11", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 12", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
       
       TrainingSubItem(
         title: "Day 13", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 14", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 15", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 16", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 17", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 18", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 19", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 20", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 21", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 22", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 23", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 24", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 25", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 26", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 27", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 28", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 29", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 30", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
     ]
   ),
@@ -183,152 +215,182 @@ final listTraingSlide = [
     listSubItem: [
       TrainingSubItem(
         title: "Day 1", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 2", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 3", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 4", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 5", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 6", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 7", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 8", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 9", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 10", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 11", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 12", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
       
       TrainingSubItem(
         title: "Day 13", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 14", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 15", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 16", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 17", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 18", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 19", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 20", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 21", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 22", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 23", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 24", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 25", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 26", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 27", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 28", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 29", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 30", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
     ]
   ),
@@ -338,152 +400,182 @@ final listTraingSlide = [
     listSubItem: [
       TrainingSubItem(
         title: "Day 1", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 2", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 3", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 4", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 5", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 6", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 7", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 8", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 9", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 10", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 11", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 12", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
       
       TrainingSubItem(
         title: "Day 13", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 14", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 15", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 16", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 17", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 18", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 19", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 20", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 21", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 22", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 23", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 24", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 25", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 26", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 27", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 28", 
-        excercise: "Rest"
+        excercise: "Rest",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 29", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
 
       TrainingSubItem(
         title: "Day 30", 
-        excercise: "15 Exercises"
+        excercise: "15 Exercises",
+        isFinish: false
       ),
     ]
   )
