@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:gym_app/models/slot.dart';
-import 'package:gym_app/myvoucher-page.dart';
+import 'package:gym_app/view/payment/myvoucher-page.dart';
 
 class ChooseDay extends StatefulWidget {
   @override
@@ -101,6 +101,8 @@ double screenWidth(BuildContext context, {double dividedBy = 1}) {
 class _ChooseDayState extends State<ChooseDay> {
   int total = 0;
   int monthRent = 1;
+
+  bool checkBoxValue = false;
   int calculateTotalChosenSlot() {
     int total = 0;
     for (var item in listRow) {
@@ -420,6 +422,14 @@ class _ChooseDayState extends State<ChooseDay> {
                         color: Colors.white,
                         fontSize: 20),
                   ),
+                  new Checkbox(value: checkBoxValue,
+                    activeColor: Colors.black,
+                    checkColor: Colors.green,
+                    onChanged:(bool newValue){
+                      setState(() {
+                        checkBoxValue = newValue;
+                    });}),
+                    checkBoxValue?
                   new GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -440,7 +450,19 @@ class _ChooseDayState extends State<ChooseDay> {
                             fontSize: 15),
                       ),
                     ),
-                  ),
+                  ):Container(
+                      color: Colors.black,
+                      padding: EdgeInsets.all(10),
+                      child: Text(
+                        'Use voucher',
+                        style: TextStyle(
+                            decoration: TextDecoration.none,
+                            fontFamily: 'Calibri',
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 15),
+                      ),
+                    )
                 ],
               ),
               SizedBox(height: 10),

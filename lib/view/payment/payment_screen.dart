@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:gym_app/myvoucher-page.dart';
-import 'package:gym_app/reward-page.dart';
-import 'package:gym_app/wallet_activity_screen.dart';
+import 'package:gym_app/view/payment/myvoucher-page.dart';
+import 'package:gym_app/view/payment/reward-page.dart';
+import 'package:gym_app/view/payment/topup-page.dart';
+import 'package:gym_app/view/payment/wallet_activity_screen.dart';
 
 Size screenSize(BuildContext context) {
   return MediaQuery.of(context).size;
@@ -116,45 +117,53 @@ class PaymentScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(10),
-                        topLeft: Radius.circular(10),
+                  new GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => TopUp()),
+                      );
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(10),
+                          topLeft: Radius.circular(10),
+                        ),
                       ),
-                    ),
-                    
-                    margin: EdgeInsets.only(right: 5),
-                    height: 90,
-                    width: screenWidth(context, dividedBy: 2) - 13,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Container(
-                          height: 30,
-                          width: 30,
-                          margin: EdgeInsets.only(bottom: 5),
-                          decoration: BoxDecoration(
-                            color: Colors.blue[900],
-                            border: Border.all(width: 1, color: Colors.blue[700]),
-                            borderRadius: BorderRadius.all(Radius.circular(30)),
-                          ),
-                          child: Icon(
-                            Entypo.wallet,
-                            color: Colors.white,
-                          ),
-                        ),
-                        Text(
-                          "Top up",
-                          style: TextStyle(
-                              decoration: TextDecoration.none,
-                              fontFamily: 'Calibri',
-                              fontWeight: FontWeight.normal,
+                      
+                      margin: EdgeInsets.only(right: 5),
+                      height: 90,
+                      width: screenWidth(context, dividedBy: 2) - 13,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Container(
+                            height: 30,
+                            width: 30,
+                            margin: EdgeInsets.only(bottom: 5),
+                            decoration: BoxDecoration(
+                              color: Colors.blue[900],
+                              border: Border.all(width: 1, color: Colors.blue[700]),
+                              borderRadius: BorderRadius.all(Radius.circular(30)),
+                            ),
+                            child: Icon(
+                              Entypo.wallet,
                               color: Colors.white,
-                              fontSize: 25),
-                        ),
-                      ],
+                            ),
+                          ),
+                          Text(
+                            "Top up",
+                            style: TextStyle(
+                                decoration: TextDecoration.none,
+                                fontFamily: 'Calibri',
+                                fontWeight: FontWeight.normal,
+                                color: Colors.white,
+                                fontSize: 25),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   new GestureDetector(

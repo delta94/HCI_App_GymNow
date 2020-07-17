@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:gym_app/account_page.dart';
-import 'package:gym_app/home-page-v2.dart';
-import 'package:gym_app/homepage.dart';
-import 'package:gym_app/mepage.dart';
-import 'package:gym_app/payment_screen.dart';
-import 'training-page.dart';
-import 'testPageView.dart';
-import 'exercise-detail.dart';
+import 'package:gym_app/Draff/account_page.dart';
+import 'package:gym_app/view/Home/home-page-v2.dart';
+import 'package:gym_app/Draff/homepage.dart';
+import 'package:gym_app/view/Me/mepage.dart';
+import 'package:gym_app/view/payment/payment_screen.dart';
+import '../Training/training-page.dart';
+import '../Training/testPageView.dart';
+import '../Training/exercise-detail.dart';
 void main() {
   runApp(MyApp());
 }

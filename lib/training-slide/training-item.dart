@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:gym_app/category-aerobicpage.dart';
-import 'package:gym_app/exercise-list.dart';
+import 'package:gym_app/view/Home/Category/category-aerobicpage.dart';
+import 'package:gym_app/view/Training/exercise-list.dart';
 import 'package:gym_app/models/training-slide.dart';
-import 'package:gym_app/trainingroom-page.dart';
+import 'package:gym_app/view/Training/trainingroom-page.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 import 'package:nice_button/nice_button.dart';
 class TrainingItem extends StatefulWidget {

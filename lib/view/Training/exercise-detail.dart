@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gym_app/category-aerobicpage.dart';
+import 'package:gym_app/view/Home/Category/category-aerobicpage.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
 class ExerciseDetail extends StatefulWidget {

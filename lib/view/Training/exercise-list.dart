@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gym_app/exercise-detail.dart';
+import 'package:gym_app/view/Training/exercise-detail.dart';
 import 'package:gym_app/models/exercise.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'training-slide/training-item.dart';
+import '../../training-slide/training-item.dart';
 
 Size screenSize(BuildContext context) {
   return MediaQuery.of(context).size;

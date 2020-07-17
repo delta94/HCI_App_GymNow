@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:gym_app/chooseday-page.dart';
+import 'package:gym_app/view/Home/Deal/chooseday-page.dart';
 Size screenSize(BuildContext context) {
   return MediaQuery.of(context).size;
 }
@@ -13,7 +13,7 @@ double screenWidth(BuildContext context, {double dividedBy = 1}) {
   return screenSize(context).width / dividedBy;
 }
 
-class PaigeProfilePage extends StatelessWidget {
+class MarcProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -70,7 +70,7 @@ class PaigeProfilePage extends StatelessWidget {
                       topRight: Radius.circular(5),
                     ),
                     child: Image.asset(
-                      'images/paige-cover.jpg',
+                      'images/marc-fitt-cover.jpg',
                       height: 150,
                       width: screenWidth(context) - 40,
                       fit: BoxFit.fill,
@@ -97,7 +97,6 @@ class PaigeProfilePage extends StatelessWidget {
                 child: Row(
                   children: <Widget>[
                     Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
                         Container(
                           height: 100,
@@ -112,14 +111,14 @@ class PaigeProfilePage extends StatelessWidget {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(10),
                             child: Image.asset(
-                              'images/paige-hathaway.jpg',
+                              'images/marc-fitt.jpg',
                               height: 100,
                               width: 100,
                             ),
                           ),
                         ),
                     Text(
-                      'Paige Hathaway',
+                      'Marc Fitt',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
@@ -152,7 +151,7 @@ class PaigeProfilePage extends StatelessWidget {
                                             fontStyle: FontStyle.italic
                                             ),
                                         text:
-                                            '\"Be a strong girl to protect yourself\"'),
+                                            '\"Live fit or die fat\"'),
                                     maxLines: 4,
                                   ),
                                 ),
@@ -204,7 +203,7 @@ class PaigeProfilePage extends StatelessWidget {
                                   left:5
                                 ),
                                 child: Text(
-                                  '15\$/month',
+                                  '20\$/month',
                                   style: TextStyle(
                                     color: Colors.red[900],
                                     fontWeight: FontWeight.bold,
@@ -255,7 +254,7 @@ class PaigeProfilePage extends StatelessWidget {
                                   left: 10
                                 ),
                                 child: Text(
-                                  '1m67',
+                                  '1m83',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.normal,
@@ -274,7 +273,7 @@ class PaigeProfilePage extends StatelessWidget {
                             child: Row(
                               children: <Widget>[
                                 Icon(
-                                  Ionicons.ios_body,
+                                  MaterialCommunityIcons.weight_kilogram,
                                   color: Colors.white,
                                   size: 15,
                                 ),
@@ -283,7 +282,7 @@ class PaigeProfilePage extends StatelessWidget {
                                     left: 10
                                   ),
                                   child: Text(
-                                    '96-60-99',
+                                    '93 Kg',
                                     style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.normal,
@@ -312,7 +311,7 @@ class PaigeProfilePage extends StatelessWidget {
                                     left: 10
                                   ),
                                   child: Text(
-                                    'New York',
+                                    'Califonia',
                                     style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.normal,
@@ -341,7 +340,7 @@ class PaigeProfilePage extends StatelessWidget {
                                     left: 10
                                   ),
                                   child: Text(
-                                    'http://facebook.com/paige',
+                                    'http://facebook.com/marcfittgym',
                                     style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.normal,
@@ -370,7 +369,7 @@ class PaigeProfilePage extends StatelessWidget {
                                     left: 10
                                   ),
                                   child: Text(
-                                    'PaigeSoCute',
+                                    'MarcFittIsMe',
                                     style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.normal,
@@ -399,7 +398,7 @@ class PaigeProfilePage extends StatelessWidget {
                                     left: 10
                                   ),
                                   child: Text(
-                                    'See more customers that trained with Paige',
+                                    'See more customers that trained with Marc Fitt',
                                     style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.normal,
@@ -436,7 +435,7 @@ class PaigeProfilePage extends StatelessWidget {
                           topLeft: Radius.circular(5),
                         ),
                         child: Image.asset(
-                          'images/paige-student1.jpg',
+                          'images/student1.jpg',
                           height: screenWidth(context)/3.4,
                           width: screenWidth(context)/3.4,
                           fit: BoxFit.fill,
@@ -449,7 +448,7 @@ class PaigeProfilePage extends StatelessWidget {
                       ),
                       child: ClipRRect(
                         child: Image.asset(
-                          'images/paige-student2.jpg',
+                          'images/student2.jpg',
                           height: screenWidth(context)/3.4,
                           width: screenWidth(context)/3.4,
                           fit: BoxFit.fill,
@@ -465,7 +464,7 @@ class PaigeProfilePage extends StatelessWidget {
                           topRight: Radius.circular(5),
                         ),
                         child: Image.asset(
-                          'images/paige-student3.jpg',
+                          'images/student3.jpg',
                           height: screenWidth(context)/3.4,
                           width: screenWidth(context)/3.4,
                           fit: BoxFit.fill,
@@ -606,7 +605,7 @@ class PaigeProfilePage extends StatelessWidget {
                         size: 13,
                       ),
                       Icon(
-                        FontAwesome.star_half_empty,
+                        FontAwesome.star,
                         color: Colors.yellow,
                         size: 13,
                       ),
@@ -615,7 +614,7 @@ class PaigeProfilePage extends StatelessWidget {
                 ),
               ),
               Text(
-                '(10.520)',
+                '(11.448)',
                 style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.normal,

@@ -61,7 +61,8 @@ showAlertDialog(BuildContext context) {
 class FullCategoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return new Scaffold(
+      body: Container(
       padding: EdgeInsets.only(
         top: 20,
         bottom: 20
@@ -108,79 +109,136 @@ class FullCategoryPage extends StatelessWidget {
             ],
           ),
           // All type
+          // Row(
+          //   children: <Widget>[
+          //     Container(
+          //       margin: EdgeInsets.only(
+          //         top: 20,
+          //         left: 20
+          //       ),
+          //       decoration: BoxDecoration(
+          //         color: Colors.red,
+          //         borderRadius: BorderRadius.all(Radius.circular(50))
+          //       ),
+          //       child: Padding(
+          //         padding: const EdgeInsets.all(12),
+          //         child: Text(
+          //           'All type',
+          //           style: TextStyle(
+          //             decoration: TextDecoration.none,
+          //             fontFamily: 'Calibri',
+          //             fontWeight: FontWeight.normal,
+          //             color: Colors.white,
+          //             fontSize: 15
+          //           ),
+          //         ),
+          //       ),
+          //     ),
+          //     Container(
+          //       margin: EdgeInsets.only(
+          //         top: 20,
+          //         left: 10
+          //       ),
+          //       decoration: BoxDecoration(
+          //         color: Colors.red[900],
+          //         borderRadius: BorderRadius.all(Radius.circular(50))
+          //       ),
+          //       child: Padding(
+          //         padding: const EdgeInsets.all(12),
+          //         child: Text(
+          //           'Male',
+          //           style: TextStyle(
+          //             decoration: TextDecoration.none,
+          //             fontFamily: 'Calibri',
+          //             fontWeight: FontWeight.normal,
+          //             color: Colors.white,
+          //             fontSize: 15
+          //           ),
+          //         ),
+          //       ),
+          //     ),
+          //     Container(
+          //       margin: EdgeInsets.only(
+          //         top: 20,
+          //         left: 10
+          //       ),
+          //       decoration: BoxDecoration(
+          //         color: Colors.red[900],
+          //         borderRadius: BorderRadius.all(Radius.circular(50))
+          //       ),
+          //       child: Padding(
+          //         padding: const EdgeInsets.all(12),
+          //         child: Text(
+          //           'Female',
+          //           style: TextStyle(
+          //             decoration: TextDecoration.none,
+          //             fontFamily: 'Calibri',
+          //             fontWeight: FontWeight.normal,
+          //             color: Colors.white,
+          //             fontSize: 15
+          //           ),
+          //         ),
+          //       ),
+          //     )
+          //   ],
+          // ),
           Row(
-            children: <Widget>[
-              Container(
-                margin: EdgeInsets.only(
-                  top: 20,
-                  left: 20
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.zero,
+                  padding: EdgeInsets.zero,
+                  width: screenWidth(context) - 60,
+                  child: LayoutBuilder(
+                    builder: (BuildContext context, BoxConstraints constraints) {
+                      return Container(
+                        margin: EdgeInsets.symmetric(vertical: 20),
+                        padding: EdgeInsets.only(
+                          left: 10
+                        ),
+                        width: constraints.maxWidth,
+                        height: 50,
+                        child: TextFormField(
+                          
+                          decoration: InputDecoration(
+                            hintText: 'Enter coach name',
+                            hintStyle: TextStyle(
+                              color: Colors.grey
+                            ),
+                            filled: true,
+                            focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  width: 1,
+                                  color: Colors.black,
+                                  style: BorderStyle.solid)),
+                            fillColor: Colors.grey[850],
+                            border: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  width: 5,
+                                  color: Colors.white30,
+                                  style: BorderStyle.solid))),
+                          style: TextStyle(
+                              decoration: TextDecoration.none,
+                              fontFamily: 'Calibri',
+                              fontWeight: FontWeight.normal,
+                              color: Colors.white,
+                              fontSize: 20),
+                      ));
+                    },
+                  ),
                 ),
-                decoration: BoxDecoration(
+                Container(
+                  margin: EdgeInsets.zero,
+                  padding: EdgeInsets.zero,
                   color: Colors.red,
-                  borderRadius: BorderRadius.all(Radius.circular(50))
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(12),
-                  child: Text(
-                    'All type',
-                    style: TextStyle(
-                      decoration: TextDecoration.none,
-                      fontFamily: 'Calibri',
-                      fontWeight: FontWeight.normal,
-                      color: Colors.white,
-                      fontSize: 15
-                    ),
+                  height: 49,
+                  width: screenWidth(context) - (screenWidth(context) - 50),
+                  child: Icon(
+                    Icons.search,
+                    color: Colors.white,
                   ),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(
-                  top: 20,
-                  left: 10
-                ),
-                decoration: BoxDecoration(
-                  color: Colors.red[900],
-                  borderRadius: BorderRadius.all(Radius.circular(50))
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(12),
-                  child: Text(
-                    'Male',
-                    style: TextStyle(
-                      decoration: TextDecoration.none,
-                      fontFamily: 'Calibri',
-                      fontWeight: FontWeight.normal,
-                      color: Colors.white,
-                      fontSize: 15
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(
-                  top: 20,
-                  left: 10
-                ),
-                decoration: BoxDecoration(
-                  color: Colors.red[900],
-                  borderRadius: BorderRadius.all(Radius.circular(50))
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(12),
-                  child: Text(
-                    'Female',
-                    style: TextStyle(
-                      decoration: TextDecoration.none,
-                      fontFamily: 'Calibri',
-                      fontWeight: FontWeight.normal,
-                      color: Colors.white,
-                      fontSize: 15
-                    ),
-                  ),
-                ),
-              )
-            ],
-          ),
+                )
+              ],
+            ),
           SizedBox(
             height: 10
           ),
@@ -494,6 +552,7 @@ class FullCategoryPage extends StatelessWidget {
         ],
       )
       
+    )
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:gym_app/profile-marcfitt-page.dart';
-import 'package:gym_app/profile-paige-page.dart';
+import 'package:gym_app/view/Home/Profile/profile-marcfitt-page.dart';
+import 'package:gym_app/view/Home/Profile/profile-paige-page.dart';
 
 class Coach{
   bool isHot;

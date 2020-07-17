@@ -1,5 +1,5 @@
-import 'training-slide/training-item.dart';
-import 'models/training-slide.dart';
+import '../../training-slide/training-item.dart';
+import '../../models/training-slide.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 

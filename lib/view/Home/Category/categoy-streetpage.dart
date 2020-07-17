@@ -58,7 +58,7 @@ showAlertDialog(BuildContext context) {
     },
   );
 }
-class YogaCategoryPage extends StatelessWidget {
+class StreetCategoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,7 +96,7 @@ class YogaCategoryPage extends StatelessWidget {
                 ),
                 Container(
                   child: Text(
-                    'Yoga',
+                    'Street Workout',
                     style: TextStyle(
                       decoration: TextDecoration.none,
                       fontFamily: 'Calibri',
@@ -182,29 +182,35 @@ class YogaCategoryPage extends StatelessWidget {
             //     )
             //   ],
             // ),
-
+            
             Row(
               children: <Widget>[
                 Container(
                   margin: EdgeInsets.zero,
                   padding: EdgeInsets.zero,
-                  width: screenWidth(context) - 50,
+                  width: screenWidth(context) - 60,
                   child: LayoutBuilder(
                     builder: (BuildContext context, BoxConstraints constraints) {
                       return Container(
                         margin: EdgeInsets.symmetric(vertical: 20),
+                        padding: EdgeInsets.only(
+                          left: 10
+                        ),
                         width: constraints.maxWidth,
                         height: 50,
                         child: TextFormField(
                           decoration: InputDecoration(
+                            hintText: 'Enter coach name',
+                            hintStyle: TextStyle(
+                              color: Colors.grey
+                            ),
                             filled: true,
                             focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   width: 1,
                                   color: Colors.black,
                                   style: BorderStyle.solid)),
-                            fillColor: Colors.white,
-                            focusColor: Colors.white,
+                            fillColor: Colors.grey[850],
                             border: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   width: 5,
@@ -214,7 +220,7 @@ class YogaCategoryPage extends StatelessWidget {
                               decoration: TextDecoration.none,
                               fontFamily: 'Calibri',
                               fontWeight: FontWeight.normal,
-                              color: Colors.black,
+                              color: Colors.white,
                               fontSize: 20),
                       ));
                     },
@@ -238,7 +244,7 @@ class YogaCategoryPage extends StatelessWidget {
             ),
             //Items Line 1
             for(var coach in listCoach)
-              if(coach.type == 'Yoga coach')
+              if(coach.type == 'Workout coach')
                 new GestureDetector(
                   onTap: () {
                     Navigator.push(

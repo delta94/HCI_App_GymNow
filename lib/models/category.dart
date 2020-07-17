@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:gym_app/category-aerobicpage.dart';
-import 'package:gym_app/category-gympage.dart';
-import 'package:gym_app/category-yogapage.dart';
-import 'package:gym_app/categoy-streetpage.dart';
+import 'package:gym_app/view/Home/Category/category-aerobicpage.dart';
+import 'package:gym_app/view/Home/Category/category-gympage.dart';
+import 'package:gym_app/view/Home/Category/category-yogapage.dart';
+import 'package:gym_app/view/Home/Category/categoy-streetpage.dart';
 
 class Category {
   String name;

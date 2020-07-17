@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
-import 'models/slot.dart';
+import '../models/slot.dart';
 
 class RentDetailedBottomSheet extends StatefulWidget {
   @override

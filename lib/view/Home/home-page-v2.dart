@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:gym_app/category-fullpage.dart';
-import 'package:gym_app/chooseday-page.dart';
+import 'package:gym_app/view/Home/Category/category-fullpage.dart';
+import 'package:gym_app/view/Home/Deal/chooseday-page.dart';
 import 'package:gym_app/models/category.dart';
 import 'package:gym_app/models/coach.dart';
 import 'package:gym_app/models/slot.dart';
-import 'package:gym_app/payment_screen.dart';
-import 'package:gym_app/rentDetailedBottomSheet.dart';
-import 'package:gym_app/reward-page.dart';
+import 'package:gym_app/view/payment/payment_screen.dart';
+import 'package:gym_app/Draff/rentDetailedBottomSheet.dart';
+import 'package:gym_app/view/payment/reward-page.dart';
 import 'package:gym_app/searchpage.dart';
 
 class HomePageV2 extends StatefulWidget {

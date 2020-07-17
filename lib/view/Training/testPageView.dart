@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'models/training-slide.dart';
-import 'training-slide/training-item.dart';
+import '../../models/training-slide.dart';
+import '../../training-slide/training-item.dart';
 
 class TestApp extends StatefulWidget {
   @override
