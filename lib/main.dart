@@ -5,9 +5,9 @@ import 'package:gym_app/view/Home/home-page-v2.dart';
 import 'package:gym_app/Draff/homepage.dart';
 import 'package:gym_app/view/Me/mepage.dart';
 import 'package:gym_app/view/payment/payment_screen.dart';
-import '../Training/training-page.dart';
-import '../Training/testPageView.dart';
-import '../Training/exercise-detail.dart';
+import 'view/Training/training-page.dart';
+import 'view/Training/testPageView.dart';
+import 'view/Training/exercise-detail.dart';
 void main() {
   runApp(MyApp());
 }

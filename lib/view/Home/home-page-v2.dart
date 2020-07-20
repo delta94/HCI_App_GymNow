@@ -7,6 +7,7 @@ import 'package:gym_app/models/coach.dart';
 import 'package:gym_app/models/slot.dart';
 import 'package:gym_app/view/payment/payment_screen.dart';
 import 'package:gym_app/Draff/rentDetailedBottomSheet.dart';
+import 'package:gym_app/view/payment/payment_screenV2.dart';
 import 'package:gym_app/view/payment/reward-page.dart';
 import 'package:gym_app/searchpage.dart';
 
@@ -244,7 +245,7 @@ class _HomePageV2State extends State<HomePageV2> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => PaymentScreen()),
+                        MaterialPageRoute(builder: (context) => PaymentScreenV2()),
                       );
                     },
                     child: Container(

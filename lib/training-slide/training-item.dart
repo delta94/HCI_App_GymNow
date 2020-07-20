@@ -187,34 +187,99 @@ class _TrainingItemState extends State<TrainingItem> {
                           MaterialPageRoute(builder: (context) => ExerciseList()),
                         );
                       },
-                      child: item.isFinish? 
+                      child: item.isFinish?
                       Container(
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            color: Colors.red[900]),
+                            color: Colors.grey[850]),
                         width: screenWidth(context),
                         height: 80,
                         margin: EdgeInsets.only(bottom: 8),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                                Icon(
-                                  MaterialCommunityIcons.clipboard_check_outline,
-                                  color: Colors.white,
-                                  size: 60,
-                                ),
-                                Text(
-                                  'Finished',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 30
+                            Padding(
+                              padding: EdgeInsets.only(
+                                left: 10
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: <Widget>[
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      Container(
+                                        width: screenWidth(context) - 70 -54 -24,
+                                        child: Text(
+                                          item.title,
+                                          style: TextStyle(
+                                              fontSize: 20, 
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white
+                                              ),
+                                        ),
+                                      ),
+                                      Icon(
+                                        FontAwesome.check,
+                                        color: Colors.green,
+                                      ),
+                                      Text(
+                                        'Finished',
+                                        style: TextStyle(
+                                          color: Colors.green,
+                                          fontWeight: FontWeight.bold
+                                        ),
+                                      )
+                                    ],
                                   ),
-                                )
+                                  
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Container(
+                                    width: screenWidth(context) - 70,
+                                    child: Text(
+                                      item.excercise,
+                                      style: TextStyle(
+                                        color: Colors.white
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            )
                           ],
                         ),
-                      ):Container(
+                      )
+                      // Container(
+                      //   padding: EdgeInsets.all(10),
+                      //   decoration: BoxDecoration(
+                      //       borderRadius: BorderRadius.circular(20),
+                      //       color: Colors.red[900]),
+                      //   width: screenWidth(context),
+                      //   height: 80,
+                      //   margin: EdgeInsets.only(bottom: 8),
+                      //   child: Row(
+                      //     mainAxisAlignment: MainAxisAlignment.start,
+                      //     children: <Widget>[
+                      //           Icon(
+                      //             MaterialCommunityIcons.clipboard_check_outline,
+                      //             color: Colors.white,
+                      //             size: 60,
+                      //           ),
+                      //           Text(
+                      //             'Finished',
+                      //             style: TextStyle(
+                      //               color: Colors.white,
+                      //               fontWeight: FontWeight.bold,
+                      //               fontSize: 30
+                      //             ),
+                      //           )
+                      //     ],
+                      //   ),
+                      // )
+                      :Container(
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
@@ -341,11 +406,19 @@ class _TrainingItemState extends State<TrainingItem> {
           Padding(
             padding: EdgeInsets.only(
               top: 10,
-              bottom: 10
+              bottom: 10,
+              left: 20
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
+                Text(
+                  'This course will be end in 29/08/2020',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontStyle: FontStyle.italic
+                  ),
+                ),
                 new GestureDetector(
                   onTap: (){
                     showAlertDialog(context);
@@ -361,7 +434,7 @@ class _TrainingItemState extends State<TrainingItem> {
                     padding: EdgeInsets.all(5),
                     
                     child: Text(
-                      'End course',
+                      'End now',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold

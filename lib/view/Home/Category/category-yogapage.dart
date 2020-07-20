@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:gym_app/models/coach.dart';
+import 'package:gym_app/view/Home/Deal/chooseday-page.dart';
 Size screenSize(BuildContext context) {
     return MediaQuery.of(context).size;
 }
@@ -339,7 +340,10 @@ class YogaCategoryPage extends StatelessWidget {
                               ),
                               new GestureDetector(
                                 onTap: () {
-                                  showAlertDialog(context);
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => ChooseDay()),
+                                  );
                                 },
                                 child: Container(
                                   decoration: BoxDecoration(
@@ -349,7 +353,7 @@ class YogaCategoryPage extends StatelessWidget {
                                     child: Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Text(
-                                          'Rent',
+                                          'Deal',
                                           style: TextStyle(
                                             color: Colors.white,
                                             fontSize: 15,

@@ -23,7 +23,7 @@ showAlertDialog(BuildContext context) {
           context: context,
           child: new AlertDialog(
             content: Container(
-              height: 160,
+              height: 175,
               child: Column(
                 children: <Widget>[
                   Icon(
@@ -49,7 +49,16 @@ showAlertDialog(BuildContext context) {
                         fontStyle: FontStyle.italic,
                         color: Colors.white,
                         fontSize: 15),
-                  )
+                  ),
+                  Text(
+                    'Go to Training to see your course',
+                    style: TextStyle(
+                        decoration: TextDecoration.none,
+                        fontFamily: 'Calibri',
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: 15),
+                  ),
                 ],
               ),
             ),
@@ -118,6 +127,7 @@ class _ChooseDayState extends State<ChooseDay> {
   int totalCash() {
     return monthRent * total;
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -237,17 +247,22 @@ class _ChooseDayState extends State<ChooseDay> {
                   margin: EdgeInsets.all(20),
                   height: 50,
                   child: TextFormField(
+                    
                     controller: txt,
                     onChanged: (value) {
                       setState(() {
-                        txt.text = value;
+                        // txt.text = value;
                         monthRent = int.parse(value);
                       });
                     },
+                    onEditingComplete: () {
+                      monthRent = int.parse(txt.text);
+                    },
+
                     keyboardType: TextInputType.number,
-                    inputFormatters: <TextInputFormatter>[
-                      WhitelistingTextInputFormatter.digitsOnly
-                    ],
+                    // inputFormatters: <TextInputFormatter>[
+                    //   WhitelistingTextInputFormatter.digitsOnly
+                    // ],
                     decoration: InputDecoration(
                         filled: true,
                         focusedBorder: OutlineInputBorder(
@@ -413,7 +428,7 @@ class _ChooseDayState extends State<ChooseDay> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Text(
-                    'Do you have any voucher?',
+                    'Want to use voucher?',
                     style: TextStyle(
                         decoration: TextDecoration.none,
                         fontFamily: 'Calibri',
@@ -422,47 +437,51 @@ class _ChooseDayState extends State<ChooseDay> {
                         color: Colors.white,
                         fontSize: 20),
                   ),
-                  new Checkbox(value: checkBoxValue,
-                    activeColor: Colors.black,
-                    checkColor: Colors.green,
-                    onChanged:(bool newValue){
-                      setState(() {
-                        checkBoxValue = newValue;
-                    });}),
-                    checkBoxValue?
-                  new GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => MyVoucher()),
-                      );
-                    },
-                    child: Container(
-                      color: Colors.red[900],
-                      padding: EdgeInsets.all(10),
-                      child: Text(
-                        'Use voucher',
-                        style: TextStyle(
-                            decoration: TextDecoration.none,
-                            fontFamily: 'Calibri',
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 15),
-                      ),
-                    ),
-                  ):Container(
-                      color: Colors.black,
-                      padding: EdgeInsets.all(10),
-                      child: Text(
-                        'Use voucher',
-                        style: TextStyle(
-                            decoration: TextDecoration.none,
-                            fontFamily: 'Calibri',
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 15),
-                      ),
-                    )
+                  new Checkbox(
+                      value: checkBoxValue,
+                      activeColor: Colors.black,
+                      checkColor: Colors.green,
+                      onChanged: (bool newValue) {
+                        setState(() {
+                          checkBoxValue = newValue;
+                        });
+                      }),
+                  checkBoxValue
+                      ? new GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MyVoucher()),
+                            );
+                          },
+                          child: Container(
+                            color: Colors.red[900],
+                            padding: EdgeInsets.all(10),
+                            child: Text(
+                              'Use voucher',
+                              style: TextStyle(
+                                  decoration: TextDecoration.none,
+                                  fontFamily: 'Calibri',
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                  fontSize: 15),
+                            ),
+                          ),
+                        )
+                      : Container(
+                          color: Colors.black,
+                          padding: EdgeInsets.all(10),
+                          child: Text(
+                            'Use voucher',
+                            style: TextStyle(
+                                decoration: TextDecoration.none,
+                                fontFamily: 'Calibri',
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize: 15),
+                          ),
+                        )
                 ],
               ),
               SizedBox(height: 10),
