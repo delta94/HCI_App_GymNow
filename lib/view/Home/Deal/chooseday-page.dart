@@ -244,7 +244,9 @@ class _ChooseDayState extends State<ChooseDay> {
                 ],
               ),
               Container(
-                  margin: EdgeInsets.all(20),
+                margin: EdgeInsets.only(
+                  top: 10
+                ),
                   height: 50,
                   child: TextFormField(
                     
@@ -283,7 +285,20 @@ class _ChooseDayState extends State<ChooseDay> {
                         fontWeight: FontWeight.normal,
                         color: Colors.white,
                         fontSize: 20),
-                  )),
+                  )
+              ),
+                Padding(
+                  padding: EdgeInsets.only(
+                    bottom: 10
+                  ),
+                  child: Text(
+                    '*It\'s 1 month if you don\'t fill',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontStyle: FontStyle.italic
+                    ),
+                  ),
+                ),
               Table(
                 border: TableBorder.all(color: Colors.white),
                 children: [

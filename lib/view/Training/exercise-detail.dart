@@ -18,9 +18,10 @@ showAlertDialog(BuildContext context) {
   Widget yesButton = FlatButton(
     child: Text("Yes"),
     color: Colors.red[900],
-    onPressed:  () {
+    onPressed:  (){
       // isFinished = true;
       Navigator.of(context, rootNavigator: true).pop()
+      
       ;
     },
   );

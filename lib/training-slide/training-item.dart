@@ -30,15 +30,154 @@ showAlertDialog(BuildContext context) {
   Widget noButton = FlatButton(
     child: Text("Yes"),
     color: Colors.grey[800],
-    onPressed:  () {
+    onPressed:  () async {
       Navigator.of(context, rootNavigator: true).pop();
+      await showDialog(
+        
+        context: context,
+        child: new AlertDialog(
+          backgroundColor: Colors.grey[850],
+          content: Container(
+            height: 270,
+            child: Column(
+              children: <Widget>[
+                Padding(
+                    padding: EdgeInsets.only(
+                      bottom: 10
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          'Rating',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        bottom: 20
+                      ),
+                      child: SmoothStarRating(
+                            allowHalfRating: false,
+                            onRated: (v) {
+                            },
+                            starCount: 5,
+                            
+                            size: 40.0,
+                            isReadOnly:false,
+                            color: Colors.yellow,
+                            borderColor: Colors.yellow,
+                            spacing:0.0
+                      )
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left:20,
+                      right:20
+                    ),
+                    child: Card(
+                      color: Colors.grey,
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: TextField(
+                          maxLines: 5,
+                          decoration: InputDecoration.collapsed(hintText: "Enter your text here"),
+                        ),
+                      )
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        NiceButton(
+                          width: 150,
+                          background: Colors.red[900],
+                          radius: 40,
+                          padding: const EdgeInsets.all(10),
+                          text: "Submit",
+                          elevation: 20,
+                          fontSize: 15,
+                          onPressed: () async {
+                            Navigator.of(context, rootNavigator: true).pop();
+                            await showDialog(
+                            context: context,
+                            child: new AlertDialog(
+                              content: Container(
+                                height: 150,
+                                child: Column(
+                                  children: <Widget>[
+                                    Icon(
+                                      FontAwesome.check_circle_o,
+                                      color: Colors.green,
+                                      size: 100,
+                                    ),
+                                    Text(
+                                      'Thanks',
+                                      style: TextStyle(
+                                          decoration: TextDecoration.none,
+                                          fontFamily: 'Calibri',
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.green,
+                                          fontSize: 30),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              backgroundColor: Colors.grey[850],
+                            ));
+                          },
+                        ),
+                      ],
+                    ),
+                  )
+              ],
+            ),
+          ),
+        )
+      );
     },
   );
 
   // set up the AlertDialog
   AlertDialog alert = AlertDialog(
     title: Text("Cofirmation"),
-    content: Text("Do you really want to end this course?"),
+    content: Container(
+      height: 75,
+      child: Column(
+        children: <Widget>[
+          TextField(
+            decoration: InputDecoration(
+              hintText: 'Enter your reason',
+              hintStyle: TextStyle(
+                color: Colors.grey
+              ),
+              filled: true,
+              focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.black,
+                    style: BorderStyle.solid)),
+              fillColor: Colors.grey[850],
+              border: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.white30,
+                    style: BorderStyle.solid))),
+                    
+            ),
+          Text("Do you really want to end this course?"),
+        ],
+      ),
+    ),
     backgroundColor: Colors.grey[900],
     shape:
           RoundedRectangleBorder(borderRadius: new BorderRadius.circular(15)),
@@ -328,78 +467,6 @@ class _TrainingItemState extends State<TrainingItem> {
                       )
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      bottom: 10
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text(
-                          'Rating',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                  Center(
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        bottom: 20
-                      ),
-                      child: SmoothStarRating(
-                            allowHalfRating: false,
-                            onRated: (v) {
-                            },
-                            starCount: 5,
-                            
-                            size: 40.0,
-                            isReadOnly:false,
-                            color: Colors.yellow,
-                            borderColor: Colors.yellow,
-                            spacing:0.0
-                      )
-                    ),
-                  ),
-
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      left:20,
-                      right:20
-                    ),
-                    child: Card(
-                      color: Colors.grey,
-                      child: Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: TextField(
-                          maxLines: 5,
-                          decoration: InputDecoration.collapsed(hintText: "Enter your text here"),
-                        ),
-                      )
-                    ),
-                  ),
-
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        NiceButton(
-                          width: 150,
-                          background: Colors.red[900],
-                          radius: 40,
-                          padding: const EdgeInsets.all(10),
-                          text: "Submit",
-                          elevation: 20,
-                          fontSize: 15,
-                          onPressed: () {},
-                        ),
-                      ],
-                    ),
-                  )
               ],
             ),
           ),
